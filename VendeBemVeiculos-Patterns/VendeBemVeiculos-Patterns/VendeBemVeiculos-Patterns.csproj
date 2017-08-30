@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlers\ClientsControl.cs" />
+    <Compile Include="Controlers\PeopleControl.cs" />
+    <Compile Include="Controlers\SalesControl.cs" />
+    <Compile Include="Controlers\EmployeesControl.cs" />
+    <Compile Include="Controlers\StockControl.cs" />
     <Compile Include="Domain\Person.cs" />
     <Compile Include="Domain\Sale.cs" />
     <Compile Include="Domain\Seller.cs" />
@@ -55,10 +60,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IDataBase.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
+    <Compile Include="Interfaces\IReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporters\SalesReport.cs" />
+    <Compile Include="Reporters\StockReport.cs" />
+    <Compile Include="TXTDataBase\ClientTXT.cs" />
+    <Compile Include="TXTDataBase\TXTDataBase.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

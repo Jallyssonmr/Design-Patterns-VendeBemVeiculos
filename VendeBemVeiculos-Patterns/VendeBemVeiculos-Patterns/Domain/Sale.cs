@@ -11,12 +11,12 @@ namespace VendeBemVeiculos_Patterns.Domain
         public Sale(DateTime date, IPerson customer, IEmployee seller, Vehicle vehicle)
         {
             this.Date = date;
-            this.Customer = customer;
+            this.Client = customer;
             this.Seller = seller;
             this.Vehicle = vehicle;
         }
 
-        public IPerson Customer { get; private set; }
+        public IPerson Client { get; private set; }
 
         public IEmployee Seller { get; private set; }
 
@@ -26,7 +26,7 @@ namespace VendeBemVeiculos_Patterns.Domain
 
         public override string ToString()
         {
-            return $"{this.Date.ToString(DATE_TIME_FORMAT)}{DELIMITER}{this.Customer.CPFDocument}{DELIMITER}" +
+            return $"{this.Date.ToString(DATE_TIME_FORMAT)}{DELIMITER}{this.Client.CPFDocument}{DELIMITER}" +
                         $"{this.Seller.CPFDocument}{DELIMITER}{this.Vehicle.ToString()}";
         }
     }

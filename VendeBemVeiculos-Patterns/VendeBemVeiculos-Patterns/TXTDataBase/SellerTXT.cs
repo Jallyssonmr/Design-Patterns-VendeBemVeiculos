@@ -1,4 +1,5 @@
 ﻿using System;
+using VendeBemVeiculos_Patterns.Domain;
 using VendeBemVeiculos_Patterns.Interfaces;
 
 namespace VendeBemVeiculos_Patterns.TXTDataBase
@@ -24,9 +25,11 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         protected override IEmployee GetLineContent(string line)
         {
             var data = line.Split(DELIMITER);
-            var loadedPerson = (IEmployee)Activator.CreateInstance(typeof(IEmployee), data[NAME], data[CPF_DOCUMENT], data[PHONE_NUMBER], data[SALARY]);
-            loadedPerson.RGDocument = data[PHONE_NUMBER];
-            loadedPerson.Address = data[ADDRESS];
+            var loadedPerson = new Seller(data[NAME], data[CPF_DOCUMENT], data[PHONE_NUMBER], Convert.ToDouble(data[SALARY]))
+            {
+                RGDocument = data[PHONE_NUMBER],
+                Address = data[ADDRESS]
+            };
             return loadedPerson;
         }
     }

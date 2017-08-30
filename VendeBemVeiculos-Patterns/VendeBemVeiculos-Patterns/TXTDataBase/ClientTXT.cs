@@ -23,9 +23,11 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         protected override Person GetLineContent(string line)
         {
             var data = line.Split(DELIMITER);
-            var loadedPerson = (Person)Activator.CreateInstance(typeof(Person), data[NAME], data[CPF_DOCUMENT], data[PHONE_NUMBER]);
-            loadedPerson.RGDocument = data[PHONE_NUMBER];
-            loadedPerson.Address = data[ADDRESS];
+            var loadedPerson = new Person(data[NAME], data[CPF_DOCUMENT], data[PHONE_NUMBER])
+            {
+                RGDocument = data[PHONE_NUMBER],
+                Address = data[ADDRESS]
+            };
             return loadedPerson;
         }
     }

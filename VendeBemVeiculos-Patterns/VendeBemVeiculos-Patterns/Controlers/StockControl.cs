@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using VendeBemVeiculos_Patterns.Domain;
+using VendeBemVeiculos_Patterns.Interfaces;
+using VendeBemVeiculos_Patterns.TXTDataBase;
 
 namespace VendeBemVeiculos_Patterns.Controlers
 {
@@ -12,7 +14,7 @@ namespace VendeBemVeiculos_Patterns.Controlers
 
         public StockControl()
         {
-            this.vehiclesDB = new VehiclesTXT();
+            this.vehiclesDB = new VehicleTXT();
             this.Stock = (ICollection<Vehicle>)vehiclesDB.Recover();
         }
 

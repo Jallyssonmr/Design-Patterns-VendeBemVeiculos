@@ -64,6 +64,7 @@
     <Compile Include="TXTDataBase\SalesTXT.cs" />
     <Compile Include="TXTDataBase\SellerTXT.cs" />
     <Compile Include="TXTDataBase\TXTDataBase.cs" />
+    <Compile Include="TXTDataBase\VehicleTXT.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

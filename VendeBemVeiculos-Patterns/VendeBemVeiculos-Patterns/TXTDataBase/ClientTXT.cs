@@ -11,7 +11,6 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int CPF_DOCUMENT = 2;
         private const int ADDRESS = 3;
         private const int PHONE_NUMBER = 4;
-
         private const char DELIMITER = ';';
         private const string BREAK_LINE = "\r\n";
 

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using VendeBemVeiculos_Patterns.Domain;
+using VendeBemVeiculos_Patterns.Interfaces;
+using VendeBemVeiculos_Patterns.TXTDataBase;
 
 namespace VendeBemVeiculos_Patterns.Controlers
 {

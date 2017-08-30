@@ -5,7 +5,7 @@ using VendeBemVeiculos_Patterns.Interfaces;
 
 namespace VendeBemVeiculos_Patterns.Controlers
 {
-    public class PeopleControl<T> where T : IPerson
+    public abstract class PeopleControl<T> where T : IPerson
     {
         private const string ALREADY_REGISTERED = "CPF já possui cadastro.";
 

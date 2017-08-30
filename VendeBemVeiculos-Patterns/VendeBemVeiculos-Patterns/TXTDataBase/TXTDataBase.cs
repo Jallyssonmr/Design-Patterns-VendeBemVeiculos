@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using VendeBemVeiculos_Patterns.Interfaces;
 
-namespace VendeBemVeiculos_Patterns
+namespace VendeBemVeiculos_Patterns.TXTDataBase
 {
     public abstract class TXTDataBase<T> : IDataBase<T>
     {

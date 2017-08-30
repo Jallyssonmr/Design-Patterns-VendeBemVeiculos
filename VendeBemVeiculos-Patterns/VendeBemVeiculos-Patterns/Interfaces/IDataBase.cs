@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace VendeBemVeiculos_Patterns
+namespace VendeBemVeiculos_Patterns.Interfaces
 {
     public interface IDataBase<T>
     {

@@ -12,7 +12,7 @@ namespace VendeBemVeiculos_Patterns.Domain
             this.Salary = salary;
         }
 
-        public double Salary { get; set; }
+        public double Salary { get; private set; }
 
         public override string ToString()
         {

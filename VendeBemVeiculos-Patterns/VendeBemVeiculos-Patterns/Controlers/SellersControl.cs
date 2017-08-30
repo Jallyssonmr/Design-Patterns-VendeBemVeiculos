@@ -4,9 +4,9 @@ using VendeBemVeiculos_Patterns.TXTDataBase;
 
 namespace VendeBemVeiculos_Patterns.Controlers
 {
-    class EmployeesControl : PeopleControl<IEmployee>
+    class SellersControl : PeopleControl<IEmployee>
     {
-        public EmployeesControl()
+        public SellersControl()
         {
             this.peopleDB = new SellerTXT();
             this.People = (ICollection<IEmployee>)peopleDB.Recover();

@@ -2,6 +2,6 @@
 {
     public interface IEmployee : IPerson
     {
-        double Salary { get; set; }
+        double Salary { get; }
     }
 }

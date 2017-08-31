@@ -13,15 +13,15 @@ namespace VendeBemVeiculos_Patterns.Domain
             this.PhoneNumber = phoneNumber;
         }
 
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public string RGDocument { get; set; }
 
-        public string CPFDocument { get; set; }
+        public string CPFDocument { get; private set; }
 
         public string Address { get; set; }
 
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get; private set; }
 
         public override string ToString()
         {

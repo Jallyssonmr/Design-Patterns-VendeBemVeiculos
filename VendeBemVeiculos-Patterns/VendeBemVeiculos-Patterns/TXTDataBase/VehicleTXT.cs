@@ -10,7 +10,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int YEAR= 2;
         private const int COLOR= 3;
 
-        private static string filePath = @"C:\Users\gabriel.poltronieri\Documents\GitHub\Design-Patterns-VendeBemVeiculos\VendeBemVeiculos-Patterns\VendeBemVeiculos-Patterns\bin\Debug\vehicle.txt";
+        private static string filePath = "vehicle.txt";
         private const char DELIMITER = ';';
         private const string BREAK_LINE = "\r\n";
 

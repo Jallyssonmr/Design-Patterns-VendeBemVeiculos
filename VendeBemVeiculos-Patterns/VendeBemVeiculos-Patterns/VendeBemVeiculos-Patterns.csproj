@@ -60,6 +60,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grids\GridSale.cs" />
+    <Compile Include="Grids\GridStock.cs" />
     <Compile Include="Interfaces\IDataBase.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
@@ -73,6 +75,9 @@
     <Compile Include="TXTDataBase\SellerTXT.cs" />
     <Compile Include="TXTDataBase\TXTDataBase.cs" />
     <Compile Include="TXTDataBase\VehicleTXT.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -322,6 +322,7 @@ namespace VendeBemVeiculos_Patterns
         {
             this.OnlyNumbers(e);
         }
+        #endregion
 
         #region GridView
         private void RefreshGridViewSales()

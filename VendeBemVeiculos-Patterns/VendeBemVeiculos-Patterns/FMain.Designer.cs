@@ -87,6 +87,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
+            this.vehicleFilterWithGrid1 = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -111,19 +112,20 @@
             this.tabs.Location = new System.Drawing.Point(12, 12);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(894, 421);
+            this.tabs.Size = new System.Drawing.Size(892, 413);
             this.tabs.TabIndex = 4;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.vehicleFilterWithGrid1);
             this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(886, 393);
+            this.tabPage1.Size = new System.Drawing.Size(884, 385);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
             // 
@@ -403,10 +405,10 @@
             this.panel5.Size = new System.Drawing.Size(880, 111);
             this.panel5.TabIndex = 30;
             // 
-            // vehicleFilter1
+            // vehicleFilter
             // 
             this.vehicleFilter.Location = new System.Drawing.Point(6, 57);
-            this.vehicleFilter.Name = "vehicleFilter1";
+            this.vehicleFilter.Name = "vehicleFilter";
             this.vehicleFilter.Size = new System.Drawing.Size(617, 54);
             this.vehicleFilter.TabIndex = 28;
             // 
@@ -861,11 +863,18 @@
             this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSeller.TabIndex = 4;
             // 
+            // vehicleFilterWithGrid1
+            // 
+            this.vehicleFilterWithGrid1.Location = new System.Drawing.Point(3, 149);
+            this.vehicleFilterWithGrid1.Name = "vehicleFilterWithGrid1";
+            this.vehicleFilterWithGrid1.Size = new System.Drawing.Size(877, 237);
+            this.vehicleFilterWithGrid1.TabIndex = 27;
+            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 431);
+            this.ClientSize = new System.Drawing.Size(903, 425);
             this.Controls.Add(this.tabs);
             this.Name = "FMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -952,6 +961,7 @@
         private System.Windows.Forms.TextBox textBoxInputAddressSeller;
         private VehicleFilterWithGrid vehicleFilterWithGrid;
         private VehicleFilter vehicleFilter;
-   }
+        private VehicleFilterWithGrid vehicleFilterWithGrid1;
+    }
 }
 

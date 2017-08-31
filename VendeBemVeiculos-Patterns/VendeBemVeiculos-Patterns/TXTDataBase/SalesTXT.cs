@@ -15,7 +15,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int VEHICLE_YEAR = 5;
         private const int VEHICLE_COLOR = 6;
 
-        private const string NAME_FILE = @"C:\Users\gabriel.poltronieri\Documents\GitHub\Design-Patterns-VendeBemVeiculos\VendeBemVeiculos-Patterns\VendeBemVeiculos-Patterns\bin\Debug\sales.txt";
+        private const string NAME_FILE = "sales.txt";
         private const string DATE_STRING = "dd/MM/yyyy";
         private const char DELIMITER = ';';
         private const string BREAK_LINE = "\r\n";

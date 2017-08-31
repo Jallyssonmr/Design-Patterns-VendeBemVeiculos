@@ -122,6 +122,23 @@ namespace VendeBemVeiculos_Patterns
         #endregion
 
         #region sales
+
+        private void ComboBoxCpfDocumentClientSale_Click(object sender, EventArgs e)
+        {
+            this.comboBoxCpfDocumentCustomerSale.Items.Clear();
+
+            var customersCPFDocuments = this.clientsControl.GetCPFDocuments().ToArray();
+            this.comboBoxCpfDocumentCustomerSale.Items.AddRange(customersCPFDocuments);
+        }
+
+        private void ComboBoxInputCpfDocumentSellersSale_Click(object sender, EventArgs e)
+        {
+            this.comboBoxCpfDocumentSellerSale.Items.Clear();
+
+            var sellersCPFDocument = this.sellersControl.GetCPFDocuments().ToArray();
+            this.comboBoxCpfDocumentSellerSale.Items.AddRange(sellersCPFDocument);
+        }
+
         private void ButtonGenerateSale_Click(object sender, EventArgs e)
         {
             if (this.AnySaleFieldIsEmpty())
@@ -215,6 +232,8 @@ namespace VendeBemVeiculos_Patterns
             this.clientsControl.Add(client);
             this.CleanFieldsInputClient();
         }
+
+        
 
         private bool AnyNewClientDataFieldIsEmpty()
         {

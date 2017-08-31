@@ -57,6 +57,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.buttonCancelSale = new System.Windows.Forms.Button();
             this.buttonGenerateSale = new System.Windows.Forms.Button();
+            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonCancelarCliente = new System.Windows.Forms.Button();
             this.buttonCadastroCliente = new System.Windows.Forms.Button();
@@ -87,7 +88,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
-            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -95,11 +95,11 @@
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -426,8 +426,9 @@
             this.comboBoxCpfDocumentSellerSale.FormattingEnabled = true;
             this.comboBoxCpfDocumentSellerSale.Location = new System.Drawing.Point(133, 28);
             this.comboBoxCpfDocumentSellerSale.Name = "comboBoxCpfDocumentSellerSale";
-            this.comboBoxCpfDocumentSellerSale.Size = new System.Drawing.Size(285, 23);
+            this.comboBoxCpfDocumentSellerSale.Size = new System.Drawing.Size(153, 23);
             this.comboBoxCpfDocumentSellerSale.TabIndex = 27;
+            this.comboBoxCpfDocumentSellerSale.Click += new System.EventHandler(this.ComboBoxInputCpfDocumentSellersSale_Click);
             this.comboBoxCpfDocumentSellerSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxCpfDocumentSellerSaleKeyPress);
             // 
             // comboBoxCpfDocumentCustomerSale
@@ -439,6 +440,7 @@
             this.comboBoxCpfDocumentCustomerSale.Name = "comboBoxCpfDocumentCustomerSale";
             this.comboBoxCpfDocumentCustomerSale.Size = new System.Drawing.Size(121, 23);
             this.comboBoxCpfDocumentCustomerSale.TabIndex = 26;
+            this.comboBoxCpfDocumentCustomerSale.Click += new System.EventHandler(this.ComboBoxCpfDocumentClientSale_Click);
             this.comboBoxCpfDocumentCustomerSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxCpfDocumentCustomerSaleKeyPress);
             // 
             // buttonSalesReport
@@ -452,6 +454,7 @@
             this.buttonSalesReport.TabIndex = 8;
             this.buttonSalesReport.Text = "Gerar Relatório de Vendas";
             this.buttonSalesReport.UseVisualStyleBackColor = false;
+            this.buttonSalesReport.Click += new System.EventHandler(this.ButtonSalesReport_Click);
             // 
             // labelSeller
             // 
@@ -510,6 +513,19 @@
             this.buttonGenerateSale.TabIndex = 2;
             this.buttonGenerateSale.Text = "Cadastrar";
             this.buttonGenerateSale.UseVisualStyleBackColor = false;
+            this.buttonGenerateSale.Click += new System.EventHandler(this.ButtonGenerateSale_Click);
+            // 
+            // dataGridViewSales
+            // 
+            this.dataGridViewSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSales.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewSales.Location = new System.Drawing.Point(3, 151);
+            this.dataGridViewSales.Name = "dataGridViewSales";
+            this.dataGridViewSales.Size = new System.Drawing.Size(887, 242);
+            this.dataGridViewSales.TabIndex = 27;
             // 
             // tabPage3
             // 
@@ -858,18 +874,6 @@
             this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSeller.TabIndex = 4;
             // 
-            // dataGridViewSales
-            // 
-            this.dataGridViewSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewSales.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewSales.Location = new System.Drawing.Point(3, 151);
-            this.dataGridViewSales.Name = "dataGridViewSales";
-            this.dataGridViewSales.Size = new System.Drawing.Size(887, 242);
-            this.dataGridViewSales.TabIndex = 27;
-            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -888,13 +892,13 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
             this.ResumeLayout(false);
 
         }

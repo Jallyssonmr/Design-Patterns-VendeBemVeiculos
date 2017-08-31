@@ -14,8 +14,14 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int YEAR= 2;
         private const int COLOR= 3;
 
+        private const string NAME_FILE = "vehicle.txt";
         private const char DELIMITER = ';';
         private const string BREAK_LINE = "\r\n";
+
+        public VehicleTXT()
+        {
+            this.FilePath = NAME_FILE;
+        }
 
         protected override string ConvertInstanceToText(Vehicle vehicle)
         {

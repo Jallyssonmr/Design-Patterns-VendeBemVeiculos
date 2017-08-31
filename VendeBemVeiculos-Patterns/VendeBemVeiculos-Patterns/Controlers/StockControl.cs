@@ -12,48 +12,47 @@ namespace VendeBemVeiculos_Patterns.Controlers
         private const char DELIMITER = ';';
 
         private IDataBase<Vehicle> vehiclesDB;
+        private ICollection<Vehicle> stock;
 
         public StockControl()
         {
             this.vehiclesDB = new VehicleTXT();
-            this.Stock = (ICollection<Vehicle>)vehiclesDB.Recover();
+            this.stock = (ICollection<Vehicle>)vehiclesDB.Recover();
         }
-
-        public ICollection<Vehicle> Stock { get; private set; }
 
         public void Add(Vehicle newVehicle, int quantity)
         {
             for (int i = 0; i < quantity; i++)
             {
-                this.Stock.Add(newVehicle);
-                this.vehiclesDB.Update(this.Stock);
+                this.stock.Add(newVehicle);
+                this.vehiclesDB.Update(this.stock);
             }
         }
 
         public void Remove(Vehicle vehicleToRemove)
         {
-            this.Stock.Remove(vehicleToRemove);
-            this.vehiclesDB.Update(this.Stock);
+            this.stock.Remove(vehicleToRemove);
+            this.vehiclesDB.Update(this.stock);
         }
 
         public int Count(Vehicle vehicleToCount)
         {
-            return this.Stock.Where(vehicle => vehicle.Equals(vehicleToCount)).Count();
+            return this.stock.Where(vehicle => vehicle.Equals(vehicleToCount)).Count();
         }
 
         public bool IsVehicleAvailable(Vehicle vehicle)
         {
-            return this.Stock.Contains(vehicle);
+            return this.stock.Contains(vehicle);
         }
 
-        public IEnumerable<Vehicle> FilterStock(Func<Vehicle, bool> filter)
+        public IEnumerable<Vehicle> SelectStockDistinct(Func<Vehicle, bool> filter)
         {
-            return this.Stock.Where(filter).Distinct();
+            return this.stock.Where(filter).Distinct();
         }
 
         public IEnumerable<string> GetAtributes(Func<Vehicle, string> atribute)
         {
-            return this.Stock.Select(atribute).Distinct();
+            return this.stock.Select(atribute).Distinct();
         }
     }
 }

@@ -13,7 +13,13 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int PHONE_NUMBER = 4;
         private const int SALARY = 5;
         private const char DELIMITER = ';';
+        private const string NAME_FILE = "seller.txt";
         private const string BREAK_LINE = "\r\n";
+
+        public SellerTXT()
+        {
+            this.FilePath = NAME_FILE;
+        }
 
         protected override string ConvertInstanceToText(IEmployee person)
         {

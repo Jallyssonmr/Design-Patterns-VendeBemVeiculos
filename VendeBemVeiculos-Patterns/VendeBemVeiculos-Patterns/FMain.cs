@@ -15,12 +15,18 @@ namespace VendeBemVeiculos_Patterns
 
         private const int VEHICLE_SEARCH = 0;
         private const int BACKSPACE_ASCII = 8;
+
         private const string BRAND = "brand";
         private const string MODEL = "model";
         private const string YEAR = "year";
         private const string COLOR = "color";
         private const string QUANTITY = "quantity";
 
+        private const string NAME = "name";
+        private const string RG_DOCUMENT = "rgDocument";
+        private const string CPF_DOCUMENT = "cpfDocument";
+        private const string ADDRESS = "address";
+        private const string PHONE_NUMBER = "phoneNumber";
 
         private ClientsControl clientsControl;
         private SellersControl sellersControl;
@@ -48,7 +54,7 @@ namespace VendeBemVeiculos_Patterns
                 this.MessageMissingData();
                 return;
             }
-            var valuesVehicle = GetValuesFieldsNewVevhicle();
+            var valuesVehicle = this.GetValuesFieldsNewVevhicle();
             var vehicle = new Vehicle(valuesVehicle[BRAND], valuesVehicle[MODEL], int.Parse(valuesVehicle[YEAR]), valuesVehicle[COLOR]);
             this.stockControl.Add(vehicle, int.Parse(valuesVehicle[QUANTITY]));
             this.CleanNewVehicleDataFields();
@@ -95,6 +101,16 @@ namespace VendeBemVeiculos_Patterns
             this.reporter = new StockReport(this.stockControl);
             this.reporter.Report();
         }
+
+        private void ComboBoxYearNewVehicleKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
+
+        private void TextBoxQuantityNewVehicleKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
         #endregion
 
         #region sales
@@ -102,7 +118,64 @@ namespace VendeBemVeiculos_Patterns
         #endregion
 
         #region clients
+        private void ButtonRegisterClientClick(object sender, EventArgs e)
+        {
+            if (this.AnyNewClientDataFieldIsEmpty())
+            {
+                this.MessageMissingData();
+                return;
+            }
+            var valuesClient = this.GetValuesFieldsNewClient();
+            var client = new Person(valuesClient[NAME], valuesClient[CPF_DOCUMENT], valuesClient[PHONE_NUMBER])
+            {
+                RGDocument = valuesClient[RG_DOCUMENT],
+                Address = valuesClient[ADDRESS]
+            };
+            this.clientsControl.Add(client);
+            this.CleanFieldsInputClient();
+        }
 
+        private bool AnyNewClientDataFieldIsEmpty()
+        {
+            return string.IsNullOrEmpty(this.textBoxInputNameClients.Text) ||
+                string.IsNullOrEmpty(this.textBoxInputCpfDocumentClients.Text) ||
+                string.IsNullOrEmpty(this.textBoxInputPhoneNumberClients.Text);
+        }
+
+        private IDictionary<string, string> GetValuesFieldsNewClient()
+        {
+            var valuesClients = new Dictionary<string, string>();
+            valuesClients.Add(NAME, this.textBoxInputNameClients.Text.ToUpper());
+            valuesClients.Add(RG_DOCUMENT, this.textBoxInputRgDocumentClients.Text.ToUpper());
+            valuesClients.Add(CPF_DOCUMENT, this.textBoxInputCpfDocumentClients.Text);
+            valuesClients.Add(ADDRESS, this.textBoxInputAddressClients.Text.ToUpper());
+            valuesClients.Add(PHONE_NUMBER, this.textBoxInputPhoneNumberClients.Text);
+            return valuesClients;
+        }
+
+        private void ButtonCancelarClientClick(object sender, EventArgs e)
+        {
+            this.CleanFieldsInputClient();
+        }
+
+        private void CleanFieldsInputClient()
+        {
+            this.textBoxInputNameClients.Text = string.Empty;
+            this.textBoxInputRgDocumentClients.Text = string.Empty;
+            this.textBoxInputCpfDocumentClients.Text = string.Empty;
+            this.textBoxInputAddressClients.Text = string.Empty;
+            this.textBoxInputPhoneNumberClients.Text = string.Empty;
+        }
+
+        private void ComboBoxCpfDocumentCustomerSaleKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
+
+        private void ComboBoxCpfDocumentSellerSaleKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
         #endregion
 
         #region sellers

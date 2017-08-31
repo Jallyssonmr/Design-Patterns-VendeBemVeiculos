@@ -29,6 +29,7 @@ namespace VendeBemVeiculos_Patterns
         private const string CPF_DOCUMENT = "cpfDocument";
         private const string ADDRESS = "address";
         private const string PHONE_NUMBER = "phoneNumber";
+        private const string SALARY = "salary";
 
         private ClientsControl clientsControl;
         private SellersControl sellersControl;
@@ -256,8 +257,69 @@ namespace VendeBemVeiculos_Patterns
         #endregion
 
         #region sellers
+        private void ButtonCadastarSellerClick(object sender, EventArgs e)
+        {
+            if (this.AnyNewSellerDataFieldIsEmpty())
+            {
+                this.MessageMissingData();
+                return;
+            }
+            var valuesSeller = this.GetValuesFieldsNewSeller();
+            var seller = new Seller(valuesSeller[NAME], valuesSeller[CPF_DOCUMENT], valuesSeller[PHONE_NUMBER],
+                Convert.ToDouble(valuesSeller[SALARY]))
+            {
+                RGDocument = valuesSeller[RG_DOCUMENT],
+                Address = valuesSeller[ADDRESS]
+            };
+            this.sellersControl.Add(seller);
+            this.CleanFieldsInputSeller();
+        }
 
-        #endregion
+        private bool AnyNewSellerDataFieldIsEmpty()
+        {
+            return string.IsNullOrEmpty(this.textBoxInputNameSeller.Text) ||
+               string.IsNullOrEmpty(this.textBoxInputCpfDocumentSeller.Text) ||
+               string.IsNullOrEmpty(this.textBoxInputPhoneNumberSeller.Text) ||
+               string.IsNullOrEmpty(this.textBoxInputSalarySeller.Text);
+        }
+
+        private IDictionary<string, string> GetValuesFieldsNewSeller()
+        {
+            var valuesSellers = new Dictionary<string, string>();
+            valuesSellers.Add(NAME, this.textBoxInputNameSeller.Text.ToUpper());
+            valuesSellers.Add(RG_DOCUMENT, this.textBoxInputRgDocumentSeller.Text.ToUpper());
+            valuesSellers.Add(CPF_DOCUMENT, this.textBoxInputCpfDocumentSeller.Text);
+            valuesSellers.Add(ADDRESS, this.textBoxInputAddressSeller.Text.ToUpper());
+            valuesSellers.Add(PHONE_NUMBER, this.textBoxInputPhoneNumberSeller.Text);
+            valuesSellers.Add(SALARY, this.textBoxInputSalarySeller.Text);
+            return valuesSellers;
+        }
+
+
+        private void CleanFieldsInputSeller()
+        {
+            this.textBoxInputNameSeller.Text = string.Empty;
+            this.textBoxInputRgDocumentSeller.Text = string.Empty;
+            this.textBoxInputCpfDocumentSeller.Text = string.Empty;
+            this.textBoxInputAddressSeller.Text = string.Empty;
+            this.textBoxInputPhoneNumberSeller.Text = string.Empty;
+            this.textBoxInputSalarySeller.Text = string.Empty;
+        }
+
+        private void TextBoxInputRgDocumentSellerKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
+
+        private void TextBoxInputCpfDocumentSellerKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
+
+        private void TextBoxInputPhoneNumberSellerKeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnlyNumbers(e);
+        }
 
         #region GridView
         private void RefreshGridViewSales()

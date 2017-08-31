@@ -30,7 +30,6 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
@@ -77,17 +76,17 @@
             this.buttonCadastarVendedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelSalary = new System.Windows.Forms.Label();
-            this.textBoxInputSalarySalesman = new System.Windows.Forms.TextBox();
+            this.textBoxInputSalarySeller = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxInputNameSalesman = new System.Windows.Forms.TextBox();
+            this.textBoxInputNameSeller = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxInputRgDocumentSalesman = new System.Windows.Forms.TextBox();
+            this.textBoxInputRgDocumentSeller = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxInputCpfDocumentSalesman = new System.Windows.Forms.TextBox();
+            this.textBoxInputCpfDocumentSeller = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxInputPhoneNumberSalesman = new System.Windows.Forms.TextBox();
-            this.textBoxInputAddressSalesman = new System.Windows.Forms.TextBox();
+            this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
+            this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -118,7 +117,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
-            this.tabPage1.Controls.Add(this.vehicleWithGrid1);
             this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -128,13 +126,6 @@
             this.tabPage1.Size = new System.Drawing.Size(886, 393);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
-            // 
-            // vehicleWithGrid1
-            // 
-            this.vehicleWithGrid1.Location = new System.Drawing.Point(4, 149);
-            this.vehicleWithGrid1.Name = "vehicleWithGrid1";
-            this.vehicleWithGrid1.Size = new System.Drawing.Size(882, 244);
-            this.vehicleWithGrid1.TabIndex = 32;
             // 
             // panel6
             // 
@@ -601,13 +592,13 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Endereço";
             // 
-            // textBoxInputNameCustomer
+            // textBoxInputNameClients
             // 
             this.textBoxInputNameClients.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxInputNameClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxInputNameClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxInputNameClients.Location = new System.Drawing.Point(5, 30);
-            this.textBoxInputNameClients.Name = "textBoxInputNameCustomer";
+            this.textBoxInputNameClients.Name = "textBoxInputNameClients";
             this.textBoxInputNameClients.Size = new System.Drawing.Size(331, 21);
             this.textBoxInputNameClients.TabIndex = 0;
             // 
@@ -622,13 +613,13 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Cpf*";
             // 
-            // textBoxInputRgDocumentCustomer
+            // textBoxInputRgDocumentClients
             // 
             this.textBoxInputRgDocumentClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxInputRgDocumentClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxInputRgDocumentClients.Location = new System.Drawing.Point(6, 87);
             this.textBoxInputRgDocumentClients.MaxLength = 9;
-            this.textBoxInputRgDocumentClients.Name = "textBoxInputRgDocumentCustomer";
+            this.textBoxInputRgDocumentClients.Name = "textBoxInputRgDocumentClients";
             this.textBoxInputRgDocumentClients.Size = new System.Drawing.Size(137, 21);
             this.textBoxInputRgDocumentClients.TabIndex = 1;
             // 
@@ -643,13 +634,13 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Celular*";
             // 
-            // textBoxInputCpfDocumentCustomer
+            // textBoxInputCpfDocumentClients
             // 
             this.textBoxInputCpfDocumentClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxInputCpfDocumentClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxInputCpfDocumentClients.Location = new System.Drawing.Point(5, 142);
             this.textBoxInputCpfDocumentClients.MaxLength = 11;
-            this.textBoxInputCpfDocumentClients.Name = "textBoxInputCpfDocumentCustomer";
+            this.textBoxInputCpfDocumentClients.Name = "textBoxInputCpfDocumentClients";
             this.textBoxInputCpfDocumentClients.Size = new System.Drawing.Size(137, 21);
             this.textBoxInputCpfDocumentClients.TabIndex = 2;
             // 
@@ -664,23 +655,23 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Rg";
             // 
-            // textBoxInputPhoneNumberCustomer
+            // textBoxInputPhoneNumberClients
             // 
             this.textBoxInputPhoneNumberClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxInputPhoneNumberClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxInputPhoneNumberClients.Location = new System.Drawing.Point(5, 253);
             this.textBoxInputPhoneNumberClients.MaxLength = 11;
-            this.textBoxInputPhoneNumberClients.Name = "textBoxInputPhoneNumberCustomer";
+            this.textBoxInputPhoneNumberClients.Name = "textBoxInputPhoneNumberClients";
             this.textBoxInputPhoneNumberClients.Size = new System.Drawing.Size(117, 21);
             this.textBoxInputPhoneNumberClients.TabIndex = 3;
             // 
-            // textBoxInputAddressCustomer
+            // textBoxInputAddressClients
             // 
             this.textBoxInputAddressClients.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxInputAddressClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxInputAddressClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxInputAddressClients.Location = new System.Drawing.Point(5, 195);
-            this.textBoxInputAddressClients.Name = "textBoxInputAddressCustomer";
+            this.textBoxInputAddressClients.Name = "textBoxInputAddressClients";
             this.textBoxInputAddressClients.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressClients.TabIndex = 4;
             // 
@@ -719,22 +710,23 @@
             this.buttonCadastarVendedor.TabIndex = 13;
             this.buttonCadastarVendedor.Text = "Cadastrar";
             this.buttonCadastarVendedor.UseVisualStyleBackColor = true;
+            this.buttonCadastarVendedor.Click += new System.EventHandler(this.ButtonCadastarSellerClick);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.labelSalary);
-            this.panel3.Controls.Add(this.textBoxInputSalarySalesman);
+            this.panel3.Controls.Add(this.textBoxInputSalarySeller);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBoxInputNameSalesman);
+            this.panel3.Controls.Add(this.textBoxInputNameSeller);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBoxInputRgDocumentSalesman);
+            this.panel3.Controls.Add(this.textBoxInputRgDocumentSeller);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBoxInputCpfDocumentSalesman);
+            this.panel3.Controls.Add(this.textBoxInputCpfDocumentSeller);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBoxInputPhoneNumberSalesman);
-            this.panel3.Controls.Add(this.textBoxInputAddressSalesman);
+            this.panel3.Controls.Add(this.textBoxInputPhoneNumberSeller);
+            this.panel3.Controls.Add(this.textBoxInputAddressSeller);
             this.panel3.Location = new System.Drawing.Point(8, 24);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(870, 289);
@@ -751,14 +743,14 @@
             this.labelSalary.TabIndex = 11;
             this.labelSalary.Text = "Salário*";
             // 
-            // textBoxInputSalarySalesman
+            // textBoxInputSalarySeller
             // 
-            this.textBoxInputSalarySalesman.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputSalarySalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputSalarySalesman.Location = new System.Drawing.Point(138, 253);
-            this.textBoxInputSalarySalesman.Name = "textBoxInputSalarySalesman";
-            this.textBoxInputSalarySalesman.Size = new System.Drawing.Size(117, 21);
-            this.textBoxInputSalarySalesman.TabIndex = 10;
+            this.textBoxInputSalarySeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputSalarySeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputSalarySeller.Location = new System.Drawing.Point(138, 253);
+            this.textBoxInputSalarySeller.Name = "textBoxInputSalarySeller";
+            this.textBoxInputSalarySeller.Size = new System.Drawing.Size(117, 21);
+            this.textBoxInputSalarySeller.TabIndex = 10;
             // 
             // label5
             // 
@@ -782,15 +774,15 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Endereço";
             // 
-            // textBoxInputNameSalesman
+            // textBoxInputNameSeller
             // 
-            this.textBoxInputNameSalesman.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxInputNameSalesman.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputNameSalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputNameSalesman.Location = new System.Drawing.Point(5, 30);
-            this.textBoxInputNameSalesman.Name = "textBoxInputNameSalesman";
-            this.textBoxInputNameSalesman.Size = new System.Drawing.Size(331, 21);
-            this.textBoxInputNameSalesman.TabIndex = 0;
+            this.textBoxInputNameSeller.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxInputNameSeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputNameSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputNameSeller.Location = new System.Drawing.Point(5, 30);
+            this.textBoxInputNameSeller.Name = "textBoxInputNameSeller";
+            this.textBoxInputNameSeller.Size = new System.Drawing.Size(331, 21);
+            this.textBoxInputNameSeller.TabIndex = 0;
             // 
             // label7
             // 
@@ -803,15 +795,16 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Cpf*";
             // 
-            // textBoxInputRgDocumentSalesman
+            // textBoxInputRgDocumentSeller
             // 
-            this.textBoxInputRgDocumentSalesman.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputRgDocumentSalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputRgDocumentSalesman.Location = new System.Drawing.Point(6, 87);
-            this.textBoxInputRgDocumentSalesman.MaxLength = 9;
-            this.textBoxInputRgDocumentSalesman.Name = "textBoxInputRgDocumentSalesman";
-            this.textBoxInputRgDocumentSalesman.Size = new System.Drawing.Size(137, 21);
-            this.textBoxInputRgDocumentSalesman.TabIndex = 1;
+            this.textBoxInputRgDocumentSeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputRgDocumentSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputRgDocumentSeller.Location = new System.Drawing.Point(6, 87);
+            this.textBoxInputRgDocumentSeller.MaxLength = 9;
+            this.textBoxInputRgDocumentSeller.Name = "textBoxInputRgDocumentSeller";
+            this.textBoxInputRgDocumentSeller.Size = new System.Drawing.Size(137, 21);
+            this.textBoxInputRgDocumentSeller.TabIndex = 1;
+            this.textBoxInputRgDocumentSeller.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxInputRgDocumentSellerKeyPress);
             // 
             // label8
             // 
@@ -824,16 +817,17 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Celular*";
             // 
-            // textBoxInputCpfDocumentSalesman
+            // textBoxInputCpfDocumentSeller
             // 
-            this.textBoxInputCpfDocumentSalesman.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputCpfDocumentSalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputCpfDocumentSalesman.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBoxInputCpfDocumentSalesman.Location = new System.Drawing.Point(5, 142);
-            this.textBoxInputCpfDocumentSalesman.MaxLength = 11;
-            this.textBoxInputCpfDocumentSalesman.Name = "textBoxInputCpfDocumentSalesman";
-            this.textBoxInputCpfDocumentSalesman.Size = new System.Drawing.Size(137, 21);
-            this.textBoxInputCpfDocumentSalesman.TabIndex = 2;
+            this.textBoxInputCpfDocumentSeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputCpfDocumentSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputCpfDocumentSeller.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBoxInputCpfDocumentSeller.Location = new System.Drawing.Point(5, 142);
+            this.textBoxInputCpfDocumentSeller.MaxLength = 11;
+            this.textBoxInputCpfDocumentSeller.Name = "textBoxInputCpfDocumentSeller";
+            this.textBoxInputCpfDocumentSeller.Size = new System.Drawing.Size(137, 21);
+            this.textBoxInputCpfDocumentSeller.TabIndex = 2;
+            this.textBoxInputCpfDocumentSeller.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxInputCpfDocumentSellerKeyPress);
             // 
             // label9
             // 
@@ -846,25 +840,26 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Rg";
             // 
-            // textBoxInputPhoneNumberSalesman
+            // textBoxInputPhoneNumberSeller
             // 
-            this.textBoxInputPhoneNumberSalesman.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputPhoneNumberSalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputPhoneNumberSalesman.Location = new System.Drawing.Point(5, 253);
-            this.textBoxInputPhoneNumberSalesman.MaxLength = 11;
-            this.textBoxInputPhoneNumberSalesman.Name = "textBoxInputPhoneNumberSalesman";
-            this.textBoxInputPhoneNumberSalesman.Size = new System.Drawing.Size(117, 21);
-            this.textBoxInputPhoneNumberSalesman.TabIndex = 3;
+            this.textBoxInputPhoneNumberSeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputPhoneNumberSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputPhoneNumberSeller.Location = new System.Drawing.Point(5, 253);
+            this.textBoxInputPhoneNumberSeller.MaxLength = 11;
+            this.textBoxInputPhoneNumberSeller.Name = "textBoxInputPhoneNumberSeller";
+            this.textBoxInputPhoneNumberSeller.Size = new System.Drawing.Size(117, 21);
+            this.textBoxInputPhoneNumberSeller.TabIndex = 3;
+            this.textBoxInputPhoneNumberSeller.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxInputPhoneNumberSellerKeyPress);
             // 
-            // textBoxInputAddressSalesman
+            // textBoxInputAddressSeller
             // 
-            this.textBoxInputAddressSalesman.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxInputAddressSalesman.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputAddressSalesman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputAddressSalesman.Location = new System.Drawing.Point(5, 194);
-            this.textBoxInputAddressSalesman.Name = "textBoxInputAddressSalesman";
-            this.textBoxInputAddressSalesman.Size = new System.Drawing.Size(413, 21);
-            this.textBoxInputAddressSalesman.TabIndex = 4;
+            this.textBoxInputAddressSeller.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxInputAddressSeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputAddressSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputAddressSeller.Location = new System.Drawing.Point(5, 194);
+            this.textBoxInputAddressSeller.Name = "textBoxInputAddressSeller";
+            this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
+            this.textBoxInputAddressSeller.TabIndex = 4;
             // 
             // FMain
             // 
@@ -944,17 +939,17 @@
         private System.Windows.Forms.Button buttonCadastarVendedor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelSalary;
-        private System.Windows.Forms.TextBox textBoxInputSalarySalesman;
+        private System.Windows.Forms.TextBox textBoxInputSalarySeller;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxInputNameSalesman;
+        private System.Windows.Forms.TextBox textBoxInputNameSeller;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxInputRgDocumentSalesman;
+        private System.Windows.Forms.TextBox textBoxInputRgDocumentSeller;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxInputCpfDocumentSalesman;
+        private System.Windows.Forms.TextBox textBoxInputCpfDocumentSeller;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxInputPhoneNumberSalesman;
-        private System.Windows.Forms.TextBox textBoxInputAddressSalesman;
+        private System.Windows.Forms.TextBox textBoxInputPhoneNumberSeller;
+        private System.Windows.Forms.TextBox textBoxInputAddressSeller;
         private VehicleFilterWithGrid vehicleWithGrid1;
         private VehicleFilter vehicleFilter1;
     }

@@ -40,12 +40,15 @@ namespace VendeBemVeiculos_Patterns
 
         public FMain()
         {
+            InitializeComponent();
+
             this.clientsControl = new ClientsControl();
             this.sellersControl = new SellersControl();
             this.stockControl = new StockControl();
             this.salesControl = new SalesControl();
 
-            InitializeComponent();
+            this.RefreshGridViewSales();
+            this.vehicleFilterWithGrid.RefreshGridViewStock();
         }
 
         #region vehicles
@@ -327,7 +330,7 @@ namespace VendeBemVeiculos_Patterns
         #region GridView
         private void RefreshGridViewSales()
         {
-            var GridOfSales = new List<GridSale>();
+            var gridOfSales = new List<GridSale>();
 
             this.salesControl.UpdateSales();
 
@@ -342,9 +345,9 @@ namespace VendeBemVeiculos_Patterns
                     Year = sales.Vehicle.Year,
                     Color = sales.Vehicle.Color
                 };
-                GridOfSales.Add(gridSales);
+                gridOfSales.Add(gridSales);
             }
-            this.dataGridViewSales.DataSource = GridOfSales;
+            this.dataGridViewSales.DataSource = gridOfSales;
         }
         #endregion
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 using VendeBemVeiculos_Patterns.Domain;
 
 namespace VendeBemVeiculos_Patterns.TXTDataBase

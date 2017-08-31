@@ -30,6 +30,7 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.vehicleFilterWithGrid = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
@@ -56,7 +57,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.buttonCancelSale = new System.Windows.Forms.Button();
             this.buttonGenerateSale = new System.Windows.Forms.Button();
-            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buttonCancelarCliente = new System.Windows.Forms.Button();
             this.buttonCadastroCliente = new System.Windows.Forms.Button();
@@ -87,7 +87,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
-            this.vehicleFilterWithGrid1 = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
+            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -95,11 +95,11 @@
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs
@@ -118,7 +118,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
-            this.tabPage1.Controls.Add(this.vehicleFilterWithGrid1);
+            this.tabPage1.Controls.Add(this.vehicleFilterWithGrid);
             this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -128,6 +128,13 @@
             this.tabPage1.Size = new System.Drawing.Size(884, 385);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
+            // 
+            // vehicleFilterWithGrid
+            // 
+            this.vehicleFilterWithGrid.Location = new System.Drawing.Point(3, 149);
+            this.vehicleFilterWithGrid.Name = "vehicleFilterWithGrid";
+            this.vehicleFilterWithGrid.Size = new System.Drawing.Size(877, 237);
+            this.vehicleFilterWithGrid.TabIndex = 27;
             // 
             // panel6
             // 
@@ -387,7 +394,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(886, 393);
+            this.tabPage2.Size = new System.Drawing.Size(884, 385);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Vendas";
             // 
@@ -504,18 +511,6 @@
             this.buttonGenerateSale.Text = "Cadastrar";
             this.buttonGenerateSale.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewSales
-            // 
-            this.dataGridViewSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewSales.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewSales.Location = new System.Drawing.Point(3, 151);
-            this.dataGridViewSales.Name = "dataGridViewSales";
-            this.dataGridViewSales.Size = new System.Drawing.Size(887, 242);
-            this.dataGridViewSales.TabIndex = 27;
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -525,7 +520,7 @@
             this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(886, 393);
+            this.tabPage3.Size = new System.Drawing.Size(884, 385);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cadastro cliente";
             // 
@@ -686,7 +681,7 @@
             this.tabPage5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(886, 393);
+            this.tabPage5.Size = new System.Drawing.Size(884, 385);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Cadastro vendedor";
             // 
@@ -863,12 +858,17 @@
             this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSeller.TabIndex = 4;
             // 
-            // vehicleFilterWithGrid1
+            // dataGridViewSales
             // 
-            this.vehicleFilterWithGrid1.Location = new System.Drawing.Point(3, 149);
-            this.vehicleFilterWithGrid1.Name = "vehicleFilterWithGrid1";
-            this.vehicleFilterWithGrid1.Size = new System.Drawing.Size(877, 237);
-            this.vehicleFilterWithGrid1.TabIndex = 27;
+            this.dataGridViewSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSales.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewSales.Location = new System.Drawing.Point(3, 151);
+            this.dataGridViewSales.Name = "dataGridViewSales";
+            this.dataGridViewSales.Size = new System.Drawing.Size(887, 242);
+            this.dataGridViewSales.TabIndex = 27;
             // 
             // FMain
             // 
@@ -888,13 +888,13 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -928,7 +928,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button buttonCancelSale;
         private System.Windows.Forms.Button buttonGenerateSale;
-        private System.Windows.Forms.DataGridView dataGridViewSales;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button buttonCancelarCliente;
         private System.Windows.Forms.Button buttonCadastroCliente;
@@ -959,9 +958,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxInputPhoneNumberSeller;
         private System.Windows.Forms.TextBox textBoxInputAddressSeller;
-        private VehicleFilterWithGrid vehicleFilterWithGrid;
         private VehicleFilter vehicleFilter;
-        private VehicleFilterWithGrid vehicleFilterWithGrid1;
+        private VehicleFilterWithGrid vehicleFilterWithGrid;
+        private System.Windows.Forms.DataGridView dataGridViewSales;
     }
 }
 

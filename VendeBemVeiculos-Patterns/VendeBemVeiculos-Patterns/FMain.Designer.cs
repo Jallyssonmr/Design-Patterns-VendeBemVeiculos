@@ -30,7 +30,7 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleWithGrid();
+            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
@@ -949,7 +949,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxInputPhoneNumberSalesman;
         private System.Windows.Forms.TextBox textBoxInputAddressSalesman;
-        private VehicleWithGrid vehicleWithGrid1;
+        private VehicleFilterWithGrid vehicleWithGrid1;
         private VehicleFilter vehicleFilter1;
     }
 }

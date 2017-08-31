@@ -206,13 +206,15 @@ namespace VendeBemVeiculos_Patterns
 
         private IDictionary<string, string> GetValuesFieldsNewSeller()
         {
-            var valuesSellers = new Dictionary<string, string>();
-            valuesSellers.Add(NAME, this.textBoxInputNameSeller.Text.ToUpper());
-            valuesSellers.Add(RG_DOCUMENT, this.textBoxInputRgDocumentSeller.Text.ToUpper());
-            valuesSellers.Add(CPF_DOCUMENT, this.textBoxInputCpfDocumentSeller.Text);
-            valuesSellers.Add(ADDRESS, this.textBoxInputAddressSeller.Text.ToUpper());
-            valuesSellers.Add(PHONE_NUMBER, this.textBoxInputPhoneNumberSeller.Text);
-            valuesSellers.Add(SALARY, this.textBoxInputSalarySeller.Text);
+            var valuesSellers = new Dictionary<string, string>
+            {
+                { NAME, this.textBoxInputNameSeller.Text.ToUpper() },
+                { RG_DOCUMENT, this.textBoxInputRgDocumentSeller.Text.ToUpper() },
+                { CPF_DOCUMENT, this.textBoxInputCpfDocumentSeller.Text },
+                { ADDRESS, this.textBoxInputAddressSeller.Text.ToUpper() },
+                { PHONE_NUMBER, this.textBoxInputPhoneNumberSeller.Text },
+                { SALARY, this.textBoxInputSalarySeller.Text }
+            };
             return valuesSellers;
         }
 

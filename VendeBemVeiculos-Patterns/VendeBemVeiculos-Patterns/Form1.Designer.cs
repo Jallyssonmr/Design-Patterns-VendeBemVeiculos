@@ -1,6 +1,6 @@
 ﻿namespace VendeBemVeiculos_Patterns
 {
-    partial class FMain
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
@@ -48,7 +47,6 @@
             this.buttonRegisterVehicleToStock = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.vehicleFilter1 = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.comboBoxCpfDocumentSellerSale = new System.Windows.Forms.ComboBox();
             this.comboBoxCpfDocumentCustomerSale = new System.Windows.Forms.ComboBox();
             this.buttonSalesReport = new System.Windows.Forms.Button();
@@ -64,14 +62,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelNome = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxInputNameClients = new System.Windows.Forms.TextBox();
+            this.textBoxInputNameCustomer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxInputRgDocumentClients = new System.Windows.Forms.TextBox();
+            this.textBoxInputRgDocumentCustomer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxInputCpfDocumentClients = new System.Windows.Forms.TextBox();
+            this.textBoxInputCpfDocumentCustomer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxInputPhoneNumberClients = new System.Windows.Forms.TextBox();
-            this.textBoxInputAddressClients = new System.Windows.Forms.TextBox();
+            this.textBoxInputPhoneNumberCustomer = new System.Windows.Forms.TextBox();
+            this.textBoxInputAddressCustomer = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.buttonCancelarVendedor = new System.Windows.Forms.Button();
             this.buttonCadastarVendedor = new System.Windows.Forms.Button();
@@ -88,6 +86,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSalesman = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSalesman = new System.Windows.Forms.TextBox();
+            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
+            this.vehicleFilter1 = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -129,13 +129,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
             // 
-            // vehicleWithGrid1
-            // 
-            this.vehicleWithGrid1.Location = new System.Drawing.Point(4, 149);
-            this.vehicleWithGrid1.Name = "vehicleWithGrid1";
-            this.vehicleWithGrid1.Size = new System.Drawing.Size(882, 244);
-            this.vehicleWithGrid1.TabIndex = 32;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -166,7 +159,6 @@
             this.buttonStockReport.TabIndex = 8;
             this.buttonStockReport.Text = "Gerar Relatório de Estoque";
             this.buttonStockReport.UseVisualStyleBackColor = false;
-            this.buttonStockReport.Click += new System.EventHandler(this.ButtonStockReportClick);
             // 
             // comboBoxBrandNewVehicle
             // 
@@ -208,7 +200,6 @@
             this.textBoxQuantityNewVehicle.Name = "textBoxQuantityNewVehicle";
             this.textBoxQuantityNewVehicle.Size = new System.Drawing.Size(35, 21);
             this.textBoxQuantityNewVehicle.TabIndex = 14;
-            this.textBoxQuantityNewVehicle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxQuantityNewVehicleKeyPress);
             // 
             // labelModelNewVehicle
             // 
@@ -300,7 +291,6 @@
             this.comboBoxYearNewVehicle.Name = "comboBoxYearNewVehicle";
             this.comboBoxYearNewVehicle.Size = new System.Drawing.Size(121, 23);
             this.comboBoxYearNewVehicle.TabIndex = 20;
-            this.comboBoxYearNewVehicle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxYearNewVehicleKeyPress);
             // 
             // textBoxModelNewVehicle
             // 
@@ -369,7 +359,6 @@
             this.buttonCancelNewVehicle.TabIndex = 26;
             this.buttonCancelNewVehicle.Text = "Limpar";
             this.buttonCancelNewVehicle.UseVisualStyleBackColor = false;
-            this.buttonCancelNewVehicle.Click += new System.EventHandler(this.ButtonCancelNewVehicleClick);
             // 
             // buttonRegisterVehicleToStock
             // 
@@ -382,7 +371,6 @@
             this.buttonRegisterVehicleToStock.TabIndex = 24;
             this.buttonRegisterVehicleToStock.Text = "Cadastrar";
             this.buttonRegisterVehicleToStock.UseVisualStyleBackColor = false;
-            this.buttonRegisterVehicleToStock.Click += new System.EventHandler(this.RuttonRegisterVehicleToStockClick);
             // 
             // tabPage2
             // 
@@ -412,13 +400,6 @@
             this.panel5.Size = new System.Drawing.Size(880, 111);
             this.panel5.TabIndex = 30;
             // 
-            // vehicleFilter1
-            // 
-            this.vehicleFilter1.Location = new System.Drawing.Point(6, 57);
-            this.vehicleFilter1.Name = "vehicleFilter1";
-            this.vehicleFilter1.Size = new System.Drawing.Size(617, 54);
-            this.vehicleFilter1.TabIndex = 28;
-            // 
             // comboBoxCpfDocumentSellerSale
             // 
             this.comboBoxCpfDocumentSellerSale.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,7 +409,6 @@
             this.comboBoxCpfDocumentSellerSale.Name = "comboBoxCpfDocumentSellerSale";
             this.comboBoxCpfDocumentSellerSale.Size = new System.Drawing.Size(285, 23);
             this.comboBoxCpfDocumentSellerSale.TabIndex = 27;
-            this.comboBoxCpfDocumentSellerSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxCpfDocumentSellerSaleKeyPress);
             // 
             // comboBoxCpfDocumentCustomerSale
             // 
@@ -439,7 +419,6 @@
             this.comboBoxCpfDocumentCustomerSale.Name = "comboBoxCpfDocumentCustomerSale";
             this.comboBoxCpfDocumentCustomerSale.Size = new System.Drawing.Size(121, 23);
             this.comboBoxCpfDocumentCustomerSale.TabIndex = 26;
-            this.comboBoxCpfDocumentCustomerSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxCpfDocumentCustomerSaleKeyPress);
             // 
             // buttonSalesReport
             // 
@@ -532,7 +511,7 @@
             this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(886, 393);
+            this.tabPage3.Size = new System.Drawing.Size(886, 388);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cadastro cliente";
             // 
@@ -547,7 +526,6 @@
             this.buttonCancelarCliente.TabIndex = 27;
             this.buttonCancelarCliente.Text = "Limpar";
             this.buttonCancelarCliente.UseVisualStyleBackColor = false;
-            this.buttonCancelarCliente.Click += new System.EventHandler(this.ButtonCancelarClientClick);
             // 
             // buttonCadastroCliente
             // 
@@ -559,21 +537,20 @@
             this.buttonCadastroCliente.TabIndex = 11;
             this.buttonCadastroCliente.Text = "Cadastrar";
             this.buttonCadastroCliente.UseVisualStyleBackColor = true;
-            this.buttonCadastroCliente.Click += new System.EventHandler(this.ButtonRegisterClientClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.labelNome);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBoxInputNameClients);
+            this.panel1.Controls.Add(this.textBoxInputNameCustomer);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBoxInputRgDocumentClients);
+            this.panel1.Controls.Add(this.textBoxInputRgDocumentCustomer);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBoxInputCpfDocumentClients);
+            this.panel1.Controls.Add(this.textBoxInputCpfDocumentCustomer);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBoxInputPhoneNumberClients);
-            this.panel1.Controls.Add(this.textBoxInputAddressClients);
+            this.panel1.Controls.Add(this.textBoxInputPhoneNumberCustomer);
+            this.panel1.Controls.Add(this.textBoxInputAddressCustomer);
             this.panel1.Location = new System.Drawing.Point(8, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(870, 289);
@@ -603,13 +580,13 @@
             // 
             // textBoxInputNameCustomer
             // 
-            this.textBoxInputNameClients.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxInputNameClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputNameClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputNameClients.Location = new System.Drawing.Point(5, 30);
-            this.textBoxInputNameClients.Name = "textBoxInputNameCustomer";
-            this.textBoxInputNameClients.Size = new System.Drawing.Size(331, 21);
-            this.textBoxInputNameClients.TabIndex = 0;
+            this.textBoxInputNameCustomer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxInputNameCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputNameCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputNameCustomer.Location = new System.Drawing.Point(5, 30);
+            this.textBoxInputNameCustomer.Name = "textBoxInputNameCustomer";
+            this.textBoxInputNameCustomer.Size = new System.Drawing.Size(331, 21);
+            this.textBoxInputNameCustomer.TabIndex = 0;
             // 
             // label3
             // 
@@ -624,13 +601,13 @@
             // 
             // textBoxInputRgDocumentCustomer
             // 
-            this.textBoxInputRgDocumentClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputRgDocumentClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputRgDocumentClients.Location = new System.Drawing.Point(6, 87);
-            this.textBoxInputRgDocumentClients.MaxLength = 9;
-            this.textBoxInputRgDocumentClients.Name = "textBoxInputRgDocumentCustomer";
-            this.textBoxInputRgDocumentClients.Size = new System.Drawing.Size(137, 21);
-            this.textBoxInputRgDocumentClients.TabIndex = 1;
+            this.textBoxInputRgDocumentCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputRgDocumentCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputRgDocumentCustomer.Location = new System.Drawing.Point(6, 87);
+            this.textBoxInputRgDocumentCustomer.MaxLength = 9;
+            this.textBoxInputRgDocumentCustomer.Name = "textBoxInputRgDocumentCustomer";
+            this.textBoxInputRgDocumentCustomer.Size = new System.Drawing.Size(137, 21);
+            this.textBoxInputRgDocumentCustomer.TabIndex = 1;
             // 
             // label2
             // 
@@ -645,13 +622,13 @@
             // 
             // textBoxInputCpfDocumentCustomer
             // 
-            this.textBoxInputCpfDocumentClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputCpfDocumentClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputCpfDocumentClients.Location = new System.Drawing.Point(5, 142);
-            this.textBoxInputCpfDocumentClients.MaxLength = 11;
-            this.textBoxInputCpfDocumentClients.Name = "textBoxInputCpfDocumentCustomer";
-            this.textBoxInputCpfDocumentClients.Size = new System.Drawing.Size(137, 21);
-            this.textBoxInputCpfDocumentClients.TabIndex = 2;
+            this.textBoxInputCpfDocumentCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputCpfDocumentCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputCpfDocumentCustomer.Location = new System.Drawing.Point(5, 142);
+            this.textBoxInputCpfDocumentCustomer.MaxLength = 11;
+            this.textBoxInputCpfDocumentCustomer.Name = "textBoxInputCpfDocumentCustomer";
+            this.textBoxInputCpfDocumentCustomer.Size = new System.Drawing.Size(137, 21);
+            this.textBoxInputCpfDocumentCustomer.TabIndex = 2;
             // 
             // label1
             // 
@@ -666,23 +643,23 @@
             // 
             // textBoxInputPhoneNumberCustomer
             // 
-            this.textBoxInputPhoneNumberClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputPhoneNumberClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputPhoneNumberClients.Location = new System.Drawing.Point(5, 253);
-            this.textBoxInputPhoneNumberClients.MaxLength = 11;
-            this.textBoxInputPhoneNumberClients.Name = "textBoxInputPhoneNumberCustomer";
-            this.textBoxInputPhoneNumberClients.Size = new System.Drawing.Size(117, 21);
-            this.textBoxInputPhoneNumberClients.TabIndex = 3;
+            this.textBoxInputPhoneNumberCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputPhoneNumberCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputPhoneNumberCustomer.Location = new System.Drawing.Point(5, 253);
+            this.textBoxInputPhoneNumberCustomer.MaxLength = 11;
+            this.textBoxInputPhoneNumberCustomer.Name = "textBoxInputPhoneNumberCustomer";
+            this.textBoxInputPhoneNumberCustomer.Size = new System.Drawing.Size(117, 21);
+            this.textBoxInputPhoneNumberCustomer.TabIndex = 3;
             // 
             // textBoxInputAddressCustomer
             // 
-            this.textBoxInputAddressClients.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxInputAddressClients.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInputAddressClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxInputAddressClients.Location = new System.Drawing.Point(5, 195);
-            this.textBoxInputAddressClients.Name = "textBoxInputAddressCustomer";
-            this.textBoxInputAddressClients.Size = new System.Drawing.Size(413, 21);
-            this.textBoxInputAddressClients.TabIndex = 4;
+            this.textBoxInputAddressCustomer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxInputAddressCustomer.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInputAddressCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxInputAddressCustomer.Location = new System.Drawing.Point(5, 195);
+            this.textBoxInputAddressCustomer.Name = "textBoxInputAddressCustomer";
+            this.textBoxInputAddressCustomer.Size = new System.Drawing.Size(413, 21);
+            this.textBoxInputAddressCustomer.TabIndex = 4;
             // 
             // tabPage5
             // 
@@ -693,7 +670,7 @@
             this.tabPage5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(886, 393);
+            this.tabPage5.Size = new System.Drawing.Size(886, 388);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Cadastro vendedor";
             // 
@@ -866,13 +843,27 @@
             this.textBoxInputAddressSalesman.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSalesman.TabIndex = 4;
             // 
-            // FMain
+            // vehicleWithGrid1
+            // 
+            this.vehicleWithGrid1.Location = new System.Drawing.Point(4, 149);
+            this.vehicleWithGrid1.Name = "vehicleWithGrid1";
+            this.vehicleWithGrid1.Size = new System.Drawing.Size(882, 244);
+            this.vehicleWithGrid1.TabIndex = 32;
+            // 
+            // vehicleFilter1
+            // 
+            this.vehicleFilter1.Location = new System.Drawing.Point(6, 57);
+            this.vehicleFilter1.Name = "vehicleFilter1";
+            this.vehicleFilter1.Size = new System.Drawing.Size(617, 54);
+            this.vehicleFilter1.TabIndex = 28;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 431);
             this.Controls.Add(this.tabs);
-            this.Name = "FMain";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.tabs.ResumeLayout(false);
@@ -931,14 +922,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxInputNameClients;
+        private System.Windows.Forms.TextBox textBoxInputNameCustomer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxInputRgDocumentClients;
+        private System.Windows.Forms.TextBox textBoxInputRgDocumentCustomer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxInputCpfDocumentClients;
+        private System.Windows.Forms.TextBox textBoxInputCpfDocumentCustomer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxInputPhoneNumberClients;
-        private System.Windows.Forms.TextBox textBoxInputAddressClients;
+        private System.Windows.Forms.TextBox textBoxInputPhoneNumberCustomer;
+        private System.Windows.Forms.TextBox textBoxInputAddressCustomer;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button buttonCancelarVendedor;
         private System.Windows.Forms.Button buttonCadastarVendedor;
@@ -955,8 +946,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxInputPhoneNumberSalesman;
         private System.Windows.Forms.TextBox textBoxInputAddressSalesman;
-        private VehicleFilterWithGrid vehicleWithGrid1;
         private VehicleFilter vehicleFilter1;
+        private VehicleFilterWithGrid vehicleWithGrid1;
     }
 }
 

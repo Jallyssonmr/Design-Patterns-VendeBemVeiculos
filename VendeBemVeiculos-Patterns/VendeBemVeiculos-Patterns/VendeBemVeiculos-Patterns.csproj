@@ -75,6 +75,18 @@
     <Compile Include="TXTDataBase\SellerTXT.cs" />
     <Compile Include="TXTDataBase\TXTDataBase.cs" />
     <Compile Include="TXTDataBase\VehicleTXT.cs" />
+    <Compile Include="VehicleFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleFilter.Designer.cs">
+      <DependentUpon>VehicleFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleWithGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleWithGrid.Designer.cs">
+      <DependentUpon>VehicleWithGrid.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VehicleFilter.resx">
+      <DependentUpon>VehicleFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleWithGrid.resx">
+      <DependentUpon>VehicleWithGrid.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

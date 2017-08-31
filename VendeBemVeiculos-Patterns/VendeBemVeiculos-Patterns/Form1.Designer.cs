@@ -86,6 +86,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSalesman = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSalesman = new System.Windows.Forms.TextBox();
+            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleWithGrid();
+            this.vehicleFilter1 = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -110,19 +112,20 @@
             this.tabs.Location = new System.Drawing.Point(12, 12);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(894, 416);
+            this.tabs.Size = new System.Drawing.Size(894, 421);
             this.tabs.TabIndex = 4;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.vehicleWithGrid1);
             this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(886, 388);
+            this.tabPage1.Size = new System.Drawing.Size(886, 393);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
             // 
@@ -379,13 +382,14 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(886, 388);
+            this.tabPage2.Size = new System.Drawing.Size(886, 393);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Vendas";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Controls.Add(this.vehicleFilter1);
             this.panel5.Controls.Add(this.comboBoxCpfDocumentSellerSale);
             this.panel5.Controls.Add(this.comboBoxCpfDocumentCustomerSale);
             this.panel5.Controls.Add(this.buttonSalesReport);
@@ -495,7 +499,7 @@
             this.dataGridViewSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewSales.Location = new System.Drawing.Point(3, 151);
             this.dataGridViewSales.Name = "dataGridViewSales";
-            this.dataGridViewSales.Size = new System.Drawing.Size(880, 237);
+            this.dataGridViewSales.Size = new System.Drawing.Size(887, 242);
             this.dataGridViewSales.TabIndex = 27;
             // 
             // tabPage3
@@ -839,11 +843,25 @@
             this.textBoxInputAddressSalesman.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSalesman.TabIndex = 4;
             // 
+            // vehicleWithGrid1
+            // 
+            this.vehicleWithGrid1.Location = new System.Drawing.Point(4, 149);
+            this.vehicleWithGrid1.Name = "vehicleWithGrid1";
+            this.vehicleWithGrid1.Size = new System.Drawing.Size(882, 244);
+            this.vehicleWithGrid1.TabIndex = 32;
+            // 
+            // vehicleFilter1
+            // 
+            this.vehicleFilter1.Location = new System.Drawing.Point(6, 57);
+            this.vehicleFilter1.Name = "vehicleFilter1";
+            this.vehicleFilter1.Size = new System.Drawing.Size(617, 54);
+            this.vehicleFilter1.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 437);
+            this.ClientSize = new System.Drawing.Size(909, 431);
             this.Controls.Add(this.tabs);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -927,6 +945,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxInputPhoneNumberSalesman;
         private System.Windows.Forms.TextBox textBoxInputAddressSalesman;
+        private VehicleWithGrid vehicleWithGrid1;
+        private VehicleFilter vehicleFilter1;
     }
 }
 

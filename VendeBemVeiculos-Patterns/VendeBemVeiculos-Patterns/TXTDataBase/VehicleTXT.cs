@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using VendeBemVeiculos_Patterns.Domain;
 
 namespace VendeBemVeiculos_Patterns.TXTDataBase
@@ -14,15 +11,15 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int YEAR= 2;
         private const int COLOR= 3;
 
-        private const string NAME_FILE = "vehicle.txt";
+        private static string filePath = "vehicle.txt";
         private const char DELIMITER = ';';
         private const string BREAK_LINE = "\r\n";
 
         public VehicleTXT()
         {
-            this.FilePath = NAME_FILE;
+            this.FilePath = filePath;
         }
-
+        
         protected override string ConvertInstanceToText(Vehicle vehicle)
         {
             if(vehicle == null) { throw new NullReferenceException(); }

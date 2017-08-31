@@ -7,13 +7,13 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
 {
     public class SalesTXT : TXTDataBase<Sale>
     {
-        private const int CLIENT_CPF_DOCUMENT = 0;
-        private const int SELLER_CPF_DOCUMENT = 1;
-        private const int VEHICLE_BRAND = 2;
-        private const int VEHICLE_MODEL = 3;
-        private const int VEHICLE_YEAR = 4;
-        private const int VEHICLE_COLOR = 5;
-        private const int DATE = 6;
+        private const int DATE = 0;
+        private const int CLIENT_CPF_DOCUMENT = 1;
+        private const int SELLER_CPF_DOCUMENT = 2;
+        private const int VEHICLE_BRAND = 3;
+        private const int VEHICLE_MODEL = 4;
+        private const int VEHICLE_YEAR = 5;
+        private const int VEHICLE_COLOR = 6;
 
         private const string NAME_FILE = "sales.txt";
         private const string DATE_STRING = "dd/MM/yyyy";
@@ -26,6 +26,8 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         public SalesTXT()
         {
             this.FilePath = NAME_FILE;
+            this.clientsControl = new ClientsControl();
+            this.sellersControl = new SellersControl();
         }
 
         protected override string ConvertInstanceToText(Sale sale)

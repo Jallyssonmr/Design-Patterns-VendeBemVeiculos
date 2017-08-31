@@ -1,6 +1,6 @@
 ﻿namespace VendeBemVeiculos_Patterns
 {
-    partial class VehicleWithGrid
+    partial class VehicleFilterWithGrid
     {
         /// <summary> 
         /// Required designer variable.

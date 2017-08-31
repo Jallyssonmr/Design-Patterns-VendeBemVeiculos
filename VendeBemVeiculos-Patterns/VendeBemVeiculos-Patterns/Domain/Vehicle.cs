@@ -24,5 +24,22 @@
         {
             return $"{this.Brand}{DELIMITER}{this.Model}{DELIMITER}{this.Year}{DELIMITER}{this.Color}";
         }
+
+        public override bool Equals(object obj)
+        {
+            if((obj is Vehicle) == false)
+            {
+                return false;
+            }
+
+            var vehicleToCompare = (Vehicle)obj;
+            return this.Brand == vehicleToCompare.Brand && this.Model == vehicleToCompare.Model 
+                                && this.Year == vehicleToCompare.Year && this.Color == vehicleToCompare.Color;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Brand.GetHashCode() + this.Model.GetHashCode() + this.Year.GetHashCode() + this.Color.GetHashCode();
+        }
     }
 }

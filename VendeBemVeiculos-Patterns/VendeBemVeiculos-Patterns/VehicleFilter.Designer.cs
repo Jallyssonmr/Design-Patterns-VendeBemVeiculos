@@ -96,6 +96,8 @@
             this.comboBoxYearVehicleSearch.Name = "comboBoxYearVehicleSearch";
             this.comboBoxYearVehicleSearch.Size = new System.Drawing.Size(121, 23);
             this.comboBoxYearVehicleSearch.TabIndex = 38;
+            this.comboBoxYearVehicleSearch.SelectedIndexChanged += new System.EventHandler(this.ComboBoxYearVehicleSearch_SelectedIndexChanged);
+            this.comboBoxYearVehicleSearch.Click += new System.EventHandler(this.ComboBoxYearVehicleSearch_Click);
             // 
             // comboBoxBrandVehiclesSearch
             // 
@@ -106,6 +108,8 @@
             this.comboBoxBrandVehiclesSearch.Name = "comboBoxBrandVehiclesSearch";
             this.comboBoxBrandVehiclesSearch.Size = new System.Drawing.Size(121, 23);
             this.comboBoxBrandVehiclesSearch.TabIndex = 36;
+            this.comboBoxBrandVehiclesSearch.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBrandVehiclesSearch_SelectedIndexChanged);
+            this.comboBoxBrandVehiclesSearch.Click += new System.EventHandler(this.ComboBoxBrandVehiclesSearch_Click);
             // 
             // comboBoxModelVehiclesSearch
             // 
@@ -117,6 +121,8 @@
             this.comboBoxModelVehiclesSearch.Name = "comboBoxModelVehiclesSearch";
             this.comboBoxModelVehiclesSearch.Size = new System.Drawing.Size(121, 23);
             this.comboBoxModelVehiclesSearch.TabIndex = 37;
+            this.comboBoxModelVehiclesSearch.SelectedIndexChanged += new System.EventHandler(this.ComboBoxModelVehiclesSearch_SelectedIndexChanged);
+            this.comboBoxModelVehiclesSearch.Click += new System.EventHandler(this.ComboBoxModelVehiclesSearch_Click);
             // 
             // comboBoxColorVehicleSearch
             // 
@@ -128,6 +134,8 @@
             this.comboBoxColorVehicleSearch.Name = "comboBoxColorVehicleSearch";
             this.comboBoxColorVehicleSearch.Size = new System.Drawing.Size(121, 23);
             this.comboBoxColorVehicleSearch.TabIndex = 39;
+            this.comboBoxColorVehicleSearch.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorVehicleSearch_SelectedIndexChanged);
+            this.comboBoxColorVehicleSearch.Click += new System.EventHandler(this.ComboBoxColorVehicleSearch_Click);
             // 
             // VehicleFilter
             // 

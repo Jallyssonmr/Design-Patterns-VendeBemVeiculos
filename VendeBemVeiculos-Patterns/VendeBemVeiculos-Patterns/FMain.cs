@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using VendeBemVeiculos_Patterns.Controlers;
 using VendeBemVeiculos_Patterns.Domain;
+using VendeBemVeiculos_Patterns.Grids;
 using VendeBemVeiculos_Patterns.Interfaces;
 using VendeBemVeiculos_Patterns.Reporters;
 
@@ -45,6 +47,7 @@ namespace VendeBemVeiculos_Patterns
 
             InitializeComponent();
         }
+
         #region vehicles
         private void RuttonRegisterVehicleToStockClick(object sender, EventArgs e)
         {
@@ -57,6 +60,9 @@ namespace VendeBemVeiculos_Patterns
             var vehicle = new Vehicle(valuesVehicle[BRAND], valuesVehicle[MODEL], int.Parse(valuesVehicle[YEAR]), valuesVehicle[COLOR]);
             this.stockControl.Add(vehicle, int.Parse(valuesVehicle[QUANTITY]));
             this.CleanNewVehicleDataFields();
+
+            this.vehicleFilterWithGrid.UpdateStock();
+            this.vehicleFilterWithGrid.RefreshGridViewStock();
         }
 
         private bool AnyNewVehicleDataFiedIsEmpty()
@@ -113,7 +119,80 @@ namespace VendeBemVeiculos_Patterns
         #endregion
 
         #region sales
+        private void ButtonGenerateSale_Click(object sender, EventArgs e)
+        {
+            if (this.AnySaleFieldIsEmpty())
+            {
+                this.MessageMissingData();
+                return;
+            }
 
+            var customerCheck = this.clientsControl.IsRegistered(this.comboBoxCpfDocumentCustomerSale.Text);
+            var sellerCheck = this.sellersControl.IsRegistered(this.comboBoxCpfDocumentSellerSale.Text);
+
+            var brand = this.vehicleFilter.Brand;
+            var model = this.vehicleFilter.Model;
+            var year = this.vehicleFilter.Year;
+            var color = this.vehicleFilter.Color;
+
+            Func<Vehicle, bool> filter = chosenVehicles => chosenVehicles.Brand == brand
+                                            && chosenVehicles.Model == model && chosenVehicles.Year == year && chosenVehicles.Color == color;
+            var vehicles = this.stockControl.FilterDistinct(filter);
+
+            if (customerCheck && sellerCheck && vehicles.Any())
+            {
+                var customer = this.clientsControl.Select(this.comboBoxCpfDocumentCustomerSale.Text);
+                var seller = this.sellersControl.Select(this.comboBoxCpfDocumentSellerSale.Text);
+
+                this.CreateSale(customer, seller, vehicles.FirstOrDefault());
+
+                this.RefreshGridViewSales();
+
+                this.CleanFieldsInputForSale();
+
+                this.vehicleFilterWithGrid.UpdateStock();
+                this.vehicleFilterWithGrid.RefreshGridViewStock();
+            }
+            else { MessageBox.Show(INVALID_DATA); }
+        }
+
+        private void ButtonCancelSale_Click(object sender, EventArgs e)
+        {
+            this.CleanFieldsInputForSale();
+        }
+
+        private void ButtonSalesReport_Click(object sender, EventArgs e)
+        {
+            this.reporter = new SalesReport(this.salesControl.Sales);
+            this.reporter.Report();
+        }
+
+        private bool AnySaleFieldIsEmpty()
+        {
+            return string.IsNullOrEmpty(this.comboBoxCpfDocumentCustomerSale.Text) ||
+                string.IsNullOrEmpty(this.comboBoxCpfDocumentSellerSale.Text) ||
+                string.IsNullOrEmpty(this.vehicleFilter.Brand) ||
+                string.IsNullOrEmpty(this.vehicleFilter.Model) ||
+                string.IsNullOrEmpty(Convert.ToString(this.vehicleFilter.Year)) ||
+                string.IsNullOrEmpty(this.vehicleFilter.Color);
+        }
+
+        private void CleanFieldsInputForSale()
+        {
+            this.vehicleFilter.Clean();
+            this.comboBoxCpfDocumentCustomerSale.Text = string.Empty;
+            this.comboBoxCpfDocumentSellerSale.Text = string.Empty;
+        }
+
+        private void CreateSale(IPerson customer, IEmployee seller, Vehicle vehicle)
+        {
+            var date = DateTime.Now;
+            var sale = new Sale(date, customer, seller, vehicle);
+
+            this.stockControl.Remove(vehicle);
+
+            this.salesControl.Add(sale);
+        }
         #endregion
 
         #region clients
@@ -216,6 +295,7 @@ namespace VendeBemVeiculos_Patterns
             return valuesSellers;
         }
 
+
         private void CleanFieldsInputSeller()
         {
             this.textBoxInputNameSeller.Text = string.Empty;
@@ -239,6 +319,29 @@ namespace VendeBemVeiculos_Patterns
         private void TextBoxInputPhoneNumberSellerKeyPress(object sender, KeyPressEventArgs e)
         {
             this.OnlyNumbers(e);
+        }
+
+        #region GridView
+        private void RefreshGridViewSales()
+        {
+            var GridOfSales = new List<GridSale>();
+
+            this.salesControl.UpdateSales();
+
+            foreach (var sales in this.salesControl.Sales)
+            {
+                var gridSales = new GridSale()
+                {
+                    Customer = sales.Client.CPFDocument,
+                    Seller = sales.Seller.CPFDocument,
+                    Brand = sales.Vehicle.Brand,
+                    Model = sales.Vehicle.Model,
+                    Year = sales.Vehicle.Year,
+                    Color = sales.Vehicle.Color
+                };
+                GridOfSales.Add(gridSales);
+            }
+            this.dataGridViewSales.DataSource = GridOfSales;
         }
         #endregion
 

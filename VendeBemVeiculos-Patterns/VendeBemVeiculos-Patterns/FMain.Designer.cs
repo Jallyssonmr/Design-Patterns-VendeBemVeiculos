@@ -47,7 +47,7 @@
             this.buttonRegisterVehicleToStock = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.vehicleFilter1 = new VendeBemVeiculos_Patterns.VehicleFilter();
+            this.vehicleFilter = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.comboBoxCpfDocumentSellerSale = new System.Windows.Forms.ComboBox();
             this.comboBoxCpfDocumentCustomerSale = new System.Windows.Forms.ComboBox();
             this.buttonSalesReport = new System.Windows.Forms.Button();
@@ -392,7 +392,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Controls.Add(this.vehicleFilter1);
+            this.panel5.Controls.Add(this.vehicleFilter);
             this.panel5.Controls.Add(this.comboBoxCpfDocumentSellerSale);
             this.panel5.Controls.Add(this.comboBoxCpfDocumentCustomerSale);
             this.panel5.Controls.Add(this.buttonSalesReport);
@@ -405,10 +405,10 @@
             // 
             // vehicleFilter1
             // 
-            this.vehicleFilter1.Location = new System.Drawing.Point(6, 57);
-            this.vehicleFilter1.Name = "vehicleFilter1";
-            this.vehicleFilter1.Size = new System.Drawing.Size(617, 54);
-            this.vehicleFilter1.TabIndex = 28;
+            this.vehicleFilter.Location = new System.Drawing.Point(6, 57);
+            this.vehicleFilter.Name = "vehicleFilter1";
+            this.vehicleFilter.Size = new System.Drawing.Size(617, 54);
+            this.vehicleFilter.TabIndex = 28;
             // 
             // comboBoxCpfDocumentSellerSale
             // 
@@ -950,8 +950,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxInputPhoneNumberSeller;
         private System.Windows.Forms.TextBox textBoxInputAddressSeller;
-        private VehicleFilterWithGrid vehicleWithGrid1;
-        private VehicleFilter vehicleFilter1;
-    }
+        private VehicleFilterWithGrid vehicleFilterWithGrid;
+        private VehicleFilter vehicleFilter;
+   }
 }
 

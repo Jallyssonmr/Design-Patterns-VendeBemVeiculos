@@ -10,7 +10,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         protected string FilePath { get; set; }
 
         public IEnumerable<T> Recover()
-        {
+        {      
             if (this.CheckFileIfExists() == false)
             {
                 throw new FileNotFoundException();

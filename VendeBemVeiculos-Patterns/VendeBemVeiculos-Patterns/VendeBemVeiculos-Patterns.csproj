@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\RegisterClient.cs" />
+    <Compile Include="Commands\RegisterSale.cs" />
+    <Compile Include="Commands\RegisterSeller.cs" />
+    <Compile Include="Commands\RegisterVehicle.cs" />
     <Compile Include="Controlers\ClientsControl.cs" />
     <Compile Include="Controlers\SellersControl.cs" />
     <Compile Include="Controlers\PeopleControl.cs" />
@@ -62,6 +66,7 @@
     </Compile>
     <Compile Include="Grids\GridSale.cs" />
     <Compile Include="Grids\GridStock.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IDataBase.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
@@ -118,5 +123,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

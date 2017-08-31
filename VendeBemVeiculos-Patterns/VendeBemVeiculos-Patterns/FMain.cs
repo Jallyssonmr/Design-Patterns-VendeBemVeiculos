@@ -185,7 +185,7 @@ namespace VendeBemVeiculos_Patterns
                 this.MessageMissingData();
                 return;
             }
-            var valuesSeller = this.GetValuesFieldsNewClient();
+            var valuesSeller = this.GetValuesFieldsNewSeller();
             var seller = new Seller(valuesSeller[NAME], valuesSeller[CPF_DOCUMENT], valuesSeller[PHONE_NUMBER],
                 Convert.ToDouble(valuesSeller[SALARY]))
             {

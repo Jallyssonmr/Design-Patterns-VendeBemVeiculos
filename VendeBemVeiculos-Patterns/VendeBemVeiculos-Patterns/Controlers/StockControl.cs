@@ -54,10 +54,5 @@ namespace VendeBemVeiculos_Patterns.Controlers
         {
             return this.stock.Select(atribute).Distinct();
         }
-
-        public IEnumerable<string> GetAllVehiclesDistinct()
-        {
-            return this.stock.SelectMany(t => t.Indexes).Distinct();
-        }
     }
 }

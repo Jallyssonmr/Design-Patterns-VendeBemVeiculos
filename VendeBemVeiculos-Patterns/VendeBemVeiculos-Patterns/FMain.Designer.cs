@@ -1,6 +1,6 @@
 ﻿namespace VendeBemVeiculos_Patterns
 {
-    partial class Form1
+    partial class FMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
@@ -47,6 +48,7 @@
             this.buttonRegisterVehicleToStock = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.vehicleFilter1 = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.comboBoxCpfDocumentSellerSale = new System.Windows.Forms.ComboBox();
             this.comboBoxCpfDocumentCustomerSale = new System.Windows.Forms.ComboBox();
             this.buttonSalesReport = new System.Windows.Forms.Button();
@@ -86,8 +88,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSalesman = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSalesman = new System.Windows.Forms.TextBox();
-            this.vehicleWithGrid1 = new VendeBemVeiculos_Patterns.VehicleWithGrid();
-            this.vehicleFilter1 = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -129,6 +129,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
             // 
+            // vehicleWithGrid1
+            // 
+            this.vehicleWithGrid1.Location = new System.Drawing.Point(4, 149);
+            this.vehicleWithGrid1.Name = "vehicleWithGrid1";
+            this.vehicleWithGrid1.Size = new System.Drawing.Size(882, 244);
+            this.vehicleWithGrid1.TabIndex = 32;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -159,6 +166,7 @@
             this.buttonStockReport.TabIndex = 8;
             this.buttonStockReport.Text = "Gerar Relatório de Estoque";
             this.buttonStockReport.UseVisualStyleBackColor = false;
+            this.buttonStockReport.Click += new System.EventHandler(this.ButtonStockReportClick);
             // 
             // comboBoxBrandNewVehicle
             // 
@@ -359,6 +367,7 @@
             this.buttonCancelNewVehicle.TabIndex = 26;
             this.buttonCancelNewVehicle.Text = "Limpar";
             this.buttonCancelNewVehicle.UseVisualStyleBackColor = false;
+            this.buttonCancelNewVehicle.Click += new System.EventHandler(this.ButtonCancelNewVehicleClick);
             // 
             // buttonRegisterVehicleToStock
             // 
@@ -371,6 +380,7 @@
             this.buttonRegisterVehicleToStock.TabIndex = 24;
             this.buttonRegisterVehicleToStock.Text = "Cadastrar";
             this.buttonRegisterVehicleToStock.UseVisualStyleBackColor = false;
+            this.buttonRegisterVehicleToStock.Click += new System.EventHandler(this.RuttonRegisterVehicleToStockClick);
             // 
             // tabPage2
             // 
@@ -399,6 +409,13 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(880, 111);
             this.panel5.TabIndex = 30;
+            // 
+            // vehicleFilter1
+            // 
+            this.vehicleFilter1.Location = new System.Drawing.Point(6, 57);
+            this.vehicleFilter1.Name = "vehicleFilter1";
+            this.vehicleFilter1.Size = new System.Drawing.Size(617, 54);
+            this.vehicleFilter1.TabIndex = 28;
             // 
             // comboBoxCpfDocumentSellerSale
             // 
@@ -511,7 +528,7 @@
             this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(886, 388);
+            this.tabPage3.Size = new System.Drawing.Size(886, 393);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cadastro cliente";
             // 
@@ -670,7 +687,7 @@
             this.tabPage5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(886, 388);
+            this.tabPage5.Size = new System.Drawing.Size(886, 393);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Cadastro vendedor";
             // 
@@ -843,27 +860,13 @@
             this.textBoxInputAddressSalesman.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSalesman.TabIndex = 4;
             // 
-            // vehicleWithGrid1
-            // 
-            this.vehicleWithGrid1.Location = new System.Drawing.Point(4, 149);
-            this.vehicleWithGrid1.Name = "vehicleWithGrid1";
-            this.vehicleWithGrid1.Size = new System.Drawing.Size(882, 244);
-            this.vehicleWithGrid1.TabIndex = 32;
-            // 
-            // vehicleFilter1
-            // 
-            this.vehicleFilter1.Location = new System.Drawing.Point(6, 57);
-            this.vehicleFilter1.Name = "vehicleFilter1";
-            this.vehicleFilter1.Size = new System.Drawing.Size(617, 54);
-            this.vehicleFilter1.TabIndex = 28;
-            // 
-            // Form1
+            // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 431);
             this.Controls.Add(this.tabs);
-            this.Name = "Form1";
+            this.Name = "FMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.tabs.ResumeLayout(false);

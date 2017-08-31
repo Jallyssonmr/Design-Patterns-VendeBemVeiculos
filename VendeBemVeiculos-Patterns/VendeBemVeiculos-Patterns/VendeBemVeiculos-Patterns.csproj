@@ -60,12 +60,16 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.Designer.cs" />
     <Compile Include="Grids\GridSale.cs" />
     <Compile Include="Grids\GridStock.cs" />
     <Compile Include="Interfaces\IDataBase.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
     <Compile Include="Interfaces\IReport.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reporters\SalesReport.cs" />
@@ -87,9 +91,16 @@
     <Compile Include="VehicleFilterWithGrid.Designer.cs">
       <DependentUpon>VehicleFilterWithGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleWithGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\VendeBemVeiculos_Patterns.FMain.resources" />
+    <EmbeddedResource Include="obj\Debug\VendeBemVeiculos_Patterns.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\VendeBemVeiculos_Patterns.VehicleFilter.resources" />
+    <EmbeddedResource Include="obj\Debug\VendeBemVeiculos_Patterns.VehicleFilterWithGrid.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,6 +116,12 @@
     <EmbeddedResource Include="VehicleFilterWithGrid.resx">
       <DependentUpon>VehicleFilterWithGrid.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\VendeBemVeiculos-Patterns.exe.config" />
+    <None Include="obj\Debug\CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\VendeBemVeiculos-Patterns.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\VendeBemVeiculos-Patterns.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +135,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\client.txt" />
+    <Content Include="bin\Debug\sales.txt" />
+    <Content Include="bin\Debug\seller.txt" />
+    <Content Include="bin\Debug\vehicle.txt" />
+    <Content Include="bin\Debug\VendeBemVeiculos-Patterns.exe" />
+    <Content Include="bin\Debug\VendeBemVeiculos-Patterns.pdb" />
+    <Content Include="obj\Debug\VendeBemVeiculos-Patterns.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\VendeBemVeiculos-Patterns.exe" />
+    <Content Include="obj\Debug\VendeBemVeiculos-Patterns.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

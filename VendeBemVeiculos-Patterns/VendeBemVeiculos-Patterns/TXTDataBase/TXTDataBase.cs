@@ -8,6 +8,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
     public abstract class TXTDataBase<T> : IDataBase<T>
     {
         protected string FILE_NOT_FOUND = "Arquivo não encontrado";
+
         protected string FilePath { get; set; }
 
         public IEnumerable<T> Recover()
@@ -31,9 +32,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
             }
             return data;
         }
-
-        protected abstract T GetLineContent(string line);
-
+        
         public void Update(IEnumerable<T> values)
         {
             if (this.CheckFileIfExists() == false)
@@ -59,12 +58,14 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
             return content;
         }
 
-        protected abstract string ConvertInstanceToText(T line);
-
         protected bool CheckFileIfExists()
         {
             if (File.Exists(this.FilePath)) { return true; }
             else { return false; }
         }
+
+        protected abstract T GetLineContent(string line);
+
+        protected abstract string ConvertInstanceToText(T line);
     }
 }

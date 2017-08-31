@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using VendeBemVeiculos_Patterns.Domain;
 using VendeBemVeiculos_Patterns.Interfaces;
@@ -38,6 +39,21 @@ namespace VendeBemVeiculos_Patterns.Controlers
         public int Count(Vehicle vehicleToCount)
         {
             return this.Stock.Where(vehicle => vehicle.Equals(vehicleToCount)).Count();
+        }
+
+        public bool IsVehicleAvailable(Vehicle vehicle)
+        {
+            return this.Stock.Contains(vehicle);
+        }
+
+        public IEnumerable<Vehicle> FilterStock(Func<Vehicle, bool> filter)
+        {
+            return this.Stock.Where(filter).Distinct();
+        }
+
+        public IEnumerable<string> GetAtributes(Func<Vehicle, string> atribute)
+        {
+            return this.Stock.Select(atribute).Distinct();
         }
     }
 }

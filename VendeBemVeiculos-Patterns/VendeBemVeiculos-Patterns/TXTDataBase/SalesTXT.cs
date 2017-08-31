@@ -26,6 +26,8 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         public SalesTXT()
         {
             this.FilePath = NAME_FILE;
+            this.clientsControl = new ClientsControl();
+            this.sellersControl = new SellersControl();
         }
 
         protected override string ConvertInstanceToText(Sale sale)

@@ -7,19 +7,16 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
 {
     public abstract class TXTDataBase<T> : IDataBase<T>
     {
-        protected string FILE_NOT_FOUND = "Arquivo não encontrado";
-
         protected string FilePath { get; set; }
 
         public IEnumerable<T> Recover()
         {
             if (this.CheckFileIfExists() == false)
             {
-                MessageBox.Show(FILE_NOT_FOUND);
-                return null;
+                throw new FileNotFoundException();
             }
 
-            List<T> data = new List<T>();
+            var data = new List<T>();
 
             using (var reader = new StreamReader(this.FilePath))
             {
@@ -43,25 +40,24 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
             using (var dataStream = File.Open(this.FilePath, FileMode.Create))
             using (var dataWriter = new StreamWriter(dataStream))
             {
-                var fileContent = this.GetFileContent(values);
+                var fileContent = this.GenerateFileContent(values);
                 dataWriter.Write(fileContent);
             }
         }
 
-        protected string GetFileContent(IEnumerable<T> values)
+        protected string GenerateFileContent(IEnumerable<T> values)
         {
             var content = string.Empty;
-            foreach (T line in values)
+            foreach (T value in values)
             {
-                content += this.ConvertInstanceToText(line);
+                content += this.ConvertInstanceToText(value);
             }
             return content;
         }
 
         protected bool CheckFileIfExists()
         {
-            if (File.Exists(this.FilePath)) { return true; }
-            else { return false; }
+            return File.Exists(this.FilePath);
         }
 
         protected abstract T GetLineContent(string line);

@@ -32,7 +32,7 @@ namespace VendeBemVeiculos_Patterns.Reporters
                 {
                     report.WriteLine(labelColumns);
 
-                    foreach (var vehicle in this.Controler.stock.Distinct().ToList())
+                    foreach (var vehicle in this.Controler.GetAllDistinct().ToList())
                     {
                         report.WriteLine($"{vehicle.ToString()}{DELIMITER}{this.Controler.Count(vehicle)}");
                     }

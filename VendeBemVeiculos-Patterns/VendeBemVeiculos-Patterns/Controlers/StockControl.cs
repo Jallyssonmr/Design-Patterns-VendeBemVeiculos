@@ -45,7 +45,7 @@ namespace VendeBemVeiculos_Patterns.Controlers
             return this.stock.Contains(vehicle);
         }
 
-        public IEnumerable<Vehicle> SelectStockDistinct(Func<Vehicle, bool> filter)
+        public IEnumerable<Vehicle> FilterDistinct(Func<Vehicle, bool> filter)
         {
             return this.stock.Where(filter).Distinct();
         }
@@ -53,6 +53,11 @@ namespace VendeBemVeiculos_Patterns.Controlers
         public IEnumerable<string> GetAtributes(Func<Vehicle, string> atribute)
         {
             return this.stock.Select(atribute).Distinct();
+        }
+
+        public IEnumerable<Vehicle> GetAllDistinct()
+        {
+            return this.stock.Distinct();
         }
     }
 }

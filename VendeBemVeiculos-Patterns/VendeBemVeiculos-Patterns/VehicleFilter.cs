@@ -131,15 +131,8 @@ namespace VendeBemVeiculos_Patterns
 
         public void UpdateStock()
         {
-            try
-            {
                 this.stockControl = new StockControl();
                 this.filteredVehicles = this.stockControl.GetAllDistinct();
-            }
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("Arquivo não foi econtrado");
-            }
         }
 
         protected virtual void ButtonClearSearch_Click(object sender, EventArgs e)

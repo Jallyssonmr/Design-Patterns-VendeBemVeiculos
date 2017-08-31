@@ -15,12 +15,18 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int VEHICLE_COLOR = 5;
         private const int DATE = 6;
 
+        private const string NAME_FILE = "sales.txt";
         private const string DATE_STRING = "dd/MM/yyyy";
         private const char DELIMITER = ';';
         private const string BREAK_LINE = "\r\n";
 
         private PeopleControl<IPerson> clientsControl;
         private PeopleControl<IEmployee> sellersControl;
+
+        public SalesTXT()
+        {
+            this.FilePath = NAME_FILE;
+        }
 
         protected override string ConvertInstanceToText(Sale sale)
         {

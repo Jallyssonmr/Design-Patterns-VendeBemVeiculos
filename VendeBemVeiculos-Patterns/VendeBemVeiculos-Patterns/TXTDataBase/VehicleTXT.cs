@@ -9,6 +9,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int MODEL = 1;
         private const int YEAR= 2;
         private const int COLOR= 3;
+        private const int PRICE = 4;
 
         private static string filePath = "vehicle.txt";
         private const char DELIMITER = ';';
@@ -23,13 +24,15 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         {
             if(vehicle == null) { throw new NullReferenceException(); }
 
-            return $"{vehicle.Brand}{DELIMITER}{vehicle.Model}{DELIMITER}{vehicle.Year}{DELIMITER}{vehicle.Color}{BREAK_LINE}";
+            return $"{vehicle.Brand}{DELIMITER}{vehicle.Model}{DELIMITER}{vehicle.Year}{DELIMITER}{vehicle.Color}" +
+                $"{DELIMITER}{vehicle.Price}{BREAK_LINE}";
         }
 
         protected override Vehicle GetLineContent(string line)
         {
             var data = line.Split(DELIMITER);
-            return new Vehicle(data[BRAND], data[MODEL], int.Parse(data[YEAR]), data[COLOR]);
+            return new Vehicle(data[BRAND], data[MODEL], int.Parse(data[YEAR]), data[COLOR], 
+                Convert.ToDouble(data[PRICE]));
         }
     }
 }

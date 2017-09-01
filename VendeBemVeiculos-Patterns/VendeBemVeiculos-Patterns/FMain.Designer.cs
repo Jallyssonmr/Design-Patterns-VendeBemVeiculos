@@ -30,8 +30,9 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.vehicleFilterWithGrid = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.maskedTextBoxPrice = new System.Windows.Forms.MaskedTextBox();
+            this.labelPrice = new System.Windows.Forms.Label();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
             this.textBoxQuantityNewVehicle = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.buttonRegisterVehicleToStock = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.vehicleFilter = new VendeBemVeiculos_Patterns.VehicleFilter();
             this.comboBoxCpfDocumentSellerSale = new System.Windows.Forms.ComboBox();
             this.comboBoxCpfDocumentCustomerSale = new System.Windows.Forms.ComboBox();
             this.buttonSalesReport = new System.Windows.Forms.Button();
@@ -88,8 +88,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -120,7 +118,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
-            this.tabPage1.Controls.Add(this.vehicleFilterWithGrid);
             this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -131,17 +128,10 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque";
             // 
-            // vehicleFilterWithGrid
-            // 
-            this.vehicleFilterWithGrid.Location = new System.Drawing.Point(3, 149);
-            this.vehicleFilterWithGrid.Name = "vehicleFilterWithGrid";
-            this.vehicleFilterWithGrid.Size = new System.Drawing.Size(877, 237);
-            this.vehicleFilterWithGrid.TabIndex = 27;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.maskedTextBox1);
+            this.panel6.Controls.Add(this.maskedTextBoxPrice);
             this.panel6.Controls.Add(this.labelPrice);
             this.panel6.Controls.Add(this.buttonStockReport);
             this.panel6.Controls.Add(this.comboBoxBrandNewVehicle);
@@ -158,6 +148,27 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(880, 106);
             this.panel6.TabIndex = 26;
+            // 
+            // maskedTextBoxPrice
+            // 
+            this.maskedTextBoxPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBoxPrice.Location = new System.Drawing.Point(258, 76);
+            this.maskedTextBoxPrice.Mask = "$00000,00";
+            this.maskedTextBoxPrice.Name = "maskedTextBoxPrice";
+            this.maskedTextBoxPrice.Size = new System.Drawing.Size(81, 21);
+            this.maskedTextBoxPrice.TabIndex = 25;
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelPrice.Location = new System.Drawing.Point(255, 56);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(46, 15);
+            this.labelPrice.TabIndex = 24;
+            this.labelPrice.Text = "Preço*";
             // 
             // buttonStockReport
             // 
@@ -405,7 +416,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Controls.Add(this.vehicleFilter);
             this.panel5.Controls.Add(this.comboBoxCpfDocumentSellerSale);
             this.panel5.Controls.Add(this.comboBoxCpfDocumentCustomerSale);
             this.panel5.Controls.Add(this.buttonSalesReport);
@@ -415,13 +425,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(880, 111);
             this.panel5.TabIndex = 30;
-            // 
-            // vehicleFilter
-            // 
-            this.vehicleFilter.Location = new System.Drawing.Point(6, 57);
-            this.vehicleFilter.Name = "vehicleFilter";
-            this.vehicleFilter.Size = new System.Drawing.Size(617, 54);
-            this.vehicleFilter.TabIndex = 28;
             // 
             // comboBoxCpfDocumentSellerSale
             // 
@@ -878,27 +881,6 @@
             this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSeller.TabIndex = 4;
             // 
-            // labelPrice
-            // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.BackColor = System.Drawing.Color.Transparent;
-            this.labelPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelPrice.Location = new System.Drawing.Point(255, 56);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(46, 15);
-            this.labelPrice.TabIndex = 24;
-            this.labelPrice.Text = "Preço*";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(258, 76);
-            this.maskedTextBox1.Mask = "$00000,00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(81, 21);
-            this.maskedTextBox1.TabIndex = 25;
-            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -990,7 +972,7 @@
         private VehicleFilter vehicleFilter;
         private VehicleFilterWithGrid vehicleFilterWithGrid;
         private System.Windows.Forms.DataGridView dataGridViewSales;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxPrice;
         private System.Windows.Forms.Label labelPrice;
     }
 }

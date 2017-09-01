@@ -88,6 +88,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -139,6 +141,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.maskedTextBox1);
+            this.panel6.Controls.Add(this.labelPrice);
             this.panel6.Controls.Add(this.buttonStockReport);
             this.panel6.Controls.Add(this.comboBoxBrandNewVehicle);
             this.panel6.Controls.Add(this.textBoxQuantityNewVehicle);
@@ -204,7 +208,7 @@
             // 
             this.textBoxQuantityNewVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxQuantityNewVehicle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxQuantityNewVehicle.Location = new System.Drawing.Point(258, 76);
+            this.textBoxQuantityNewVehicle.Location = new System.Drawing.Point(368, 76);
             this.textBoxQuantityNewVehicle.Name = "textBoxQuantityNewVehicle";
             this.textBoxQuantityNewVehicle.Size = new System.Drawing.Size(35, 21);
             this.textBoxQuantityNewVehicle.TabIndex = 14;
@@ -246,7 +250,7 @@
             this.labelQuantityNewVehicle.BackColor = System.Drawing.Color.Transparent;
             this.labelQuantityNewVehicle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuantityNewVehicle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelQuantityNewVehicle.Location = new System.Drawing.Point(255, 56);
+            this.labelQuantityNewVehicle.Location = new System.Drawing.Point(365, 56);
             this.labelQuantityNewVehicle.Name = "labelQuantityNewVehicle";
             this.labelQuantityNewVehicle.Size = new System.Drawing.Size(77, 15);
             this.labelQuantityNewVehicle.TabIndex = 17;
@@ -874,6 +878,27 @@
             this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSeller.TabIndex = 4;
             // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelPrice.Location = new System.Drawing.Point(255, 56);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(46, 15);
+            this.labelPrice.TabIndex = 24;
+            this.labelPrice.Text = "Preço*";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(258, 76);
+            this.maskedTextBox1.Mask = "$00000,00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(81, 21);
+            this.maskedTextBox1.TabIndex = 25;
+            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -965,6 +990,8 @@
         private VehicleFilter vehicleFilter;
         private VehicleFilterWithGrid vehicleFilterWithGrid;
         private System.Windows.Forms.DataGridView dataGridViewSales;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label labelPrice;
     }
 }
 

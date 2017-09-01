@@ -1,4 +1,6 @@
-﻿namespace VendeBemVeiculos_Patterns.Domain
+﻿using System;
+
+namespace VendeBemVeiculos_Patterns.Domain
 {
     public class Vehicle
     {
@@ -25,7 +27,7 @@
 
         public override string ToString()
         {
-            return $"{this.Brand}{DELIMITER}{this.Model}{DELIMITER}{this.Year}{DELIMITER}{this.Color}";
+            return $"{this.Brand}{DELIMITER}{this.Model}{DELIMITER}{this.Year}{DELIMITER}{this.Color}{DELIMITER}{this.Price}";
         }
 
         public override bool Equals(object obj)
@@ -37,12 +39,14 @@
 
             var vehicleToCompare = (Vehicle)obj;
             return this.Brand == vehicleToCompare.Brand && this.Model == vehicleToCompare.Model 
-                                && this.Year == vehicleToCompare.Year && this.Color == vehicleToCompare.Color;
+                                && this.Year == vehicleToCompare.Year && this.Color == vehicleToCompare.Color 
+                                && this.Price == vehicleToCompare.Price;
         }
 
         public override int GetHashCode()
         {
-            return this.Brand.GetHashCode() + this.Model.GetHashCode() + this.Year.GetHashCode() + this.Color.GetHashCode();
+            return this.Brand.GetHashCode() + this.Model.GetHashCode() + this.Year.GetHashCode() + 
+                this.Color.GetHashCode() + this.Price.GetHashCode();
         }
     }
 }

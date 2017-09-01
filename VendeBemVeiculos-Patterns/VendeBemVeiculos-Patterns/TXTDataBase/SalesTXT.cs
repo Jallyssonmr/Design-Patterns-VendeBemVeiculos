@@ -14,6 +14,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
         private const int VEHICLE_MODEL = 4;
         private const int VEHICLE_YEAR = 5;
         private const int VEHICLE_COLOR = 6;
+        private const int VEHICLE_PRICE = 7;
 
         private const string NAME_FILE = "sales.txt";
         private const string DATE_STRING = "dd/MM/yyyy";
@@ -58,7 +59,8 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
             var model = data[VEHICLE_MODEL];
             var year = int.Parse(data[VEHICLE_YEAR]);
             var color = data[VEHICLE_COLOR];
-            return new Vehicle(brand, model, year, color);
+            var price = Convert.ToDouble(data[VEHICLE_PRICE]);
+            return new Vehicle(brand, model, year, color,price);
         }
     }
 }

@@ -77,7 +77,7 @@ namespace VendeBemVeiculos_Patterns
                 string.IsNullOrEmpty(this.comboBoxBrandNewVehicle.Text) ||
                 string.IsNullOrEmpty(this.comboBoxYearNewVehicle.Text) ||
                 string.IsNullOrEmpty(this.comboBoxColorNewVehicle.Text) ||
-                string.IsNullOrEmpty(this.maskedTextBoxPrice.Text);
+                string.IsNullOrEmpty(this.textBoxPrice.Text);
         }
 
         private IDictionary<string, string> GetValuesFieldsNewVevhicle()
@@ -88,7 +88,7 @@ namespace VendeBemVeiculos_Patterns
             valuesVehicles.Add(MODEL, this.textBoxModelNewVehicle.Text.ToUpper());
             valuesVehicles.Add(YEAR, this.comboBoxYearNewVehicle.Text);
             valuesVehicles.Add(COLOR, this.comboBoxColorNewVehicle.Text.ToUpper());
-            valuesVehicles.Add(PRICE, this.maskedTextBoxPrice.Text);
+            valuesVehicles.Add(PRICE, this.textBoxPrice.Text);
             valuesVehicles.Add(QUANTITY, this.textBoxQuantityNewVehicle.Text);
             return valuesVehicles;
         }
@@ -106,7 +106,7 @@ namespace VendeBemVeiculos_Patterns
             this.comboBoxBrandNewVehicle.Text = string.Empty;
             this.comboBoxYearNewVehicle.Text = string.Empty;
             this.comboBoxColorNewVehicle.Text = string.Empty;
-            this.maskedTextBoxPrice.Text = string.Empty;
+            this.textBoxPrice.Text = string.Empty;
         }
 
         private void ButtonStockReportClick(object sender, EventArgs e)
@@ -307,7 +307,7 @@ namespace VendeBemVeiculos_Patterns
             return string.IsNullOrEmpty(this.textBoxInputNameSeller.Text) ||
                string.IsNullOrEmpty(this.textBoxInputCpfDocumentSeller.Text) ||
                string.IsNullOrEmpty(this.textBoxInputPhoneNumberSeller.Text) ||
-               string.IsNullOrEmpty(this.textBoxInputSalarySeller.Text);
+               string.IsNullOrEmpty(this.textBoxSalarySeller.Text);
         }
 
         private IDictionary<string, string> GetValuesFieldsNewSeller()
@@ -319,7 +319,7 @@ namespace VendeBemVeiculos_Patterns
                 { CPF_DOCUMENT, this.textBoxInputCpfDocumentSeller.Text },
                 { ADDRESS, this.textBoxInputAddressSeller.Text.ToUpper() },
                 { PHONE_NUMBER, this.textBoxInputPhoneNumberSeller.Text },
-                { SALARY, this.textBoxInputSalarySeller.Text }
+                { SALARY, this.textBoxSalarySeller.Text }
             };
             return valuesSellers;
         }
@@ -332,7 +332,7 @@ namespace VendeBemVeiculos_Patterns
             this.textBoxInputCpfDocumentSeller.Text = string.Empty;
             this.textBoxInputAddressSeller.Text = string.Empty;
             this.textBoxInputPhoneNumberSeller.Text = string.Empty;
-            this.textBoxInputSalarySeller.Text = string.Empty;
+            this.textBoxSalarySeller.Text = string.Empty;
         }
 
         private void TextBoxInputRgDocumentSellerKeyPress(object sender, KeyPressEventArgs e)
@@ -367,7 +367,8 @@ namespace VendeBemVeiculos_Patterns
                     Brand = sales.Vehicle.Brand,
                     Model = sales.Vehicle.Model,
                     Year = sales.Vehicle.Year,
-                    Color = sales.Vehicle.Color
+                    Color = sales.Vehicle.Color,
+                    Price = sales.Vehicle.Price
                 };
                 gridOfSales.Add(gridSales);
             }

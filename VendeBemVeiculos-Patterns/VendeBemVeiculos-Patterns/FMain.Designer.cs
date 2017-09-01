@@ -32,6 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.vehicleFilterWithGrid = new VendeBemVeiculos_Patterns.VehicleFilterWithGrid();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
             this.buttonStockReport = new System.Windows.Forms.Button();
             this.comboBoxBrandNewVehicle = new System.Windows.Forms.ComboBox();
@@ -77,6 +78,7 @@
             this.buttonCancelarVendedor = new System.Windows.Forms.Button();
             this.buttonCadastarVendedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxSalarySeller = new System.Windows.Forms.TextBox();
             this.labelSalary = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -88,8 +90,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxInputPhoneNumberSeller = new System.Windows.Forms.TextBox();
             this.textBoxInputAddressSeller = new System.Windows.Forms.TextBox();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxSalarySeller = new System.Windows.Forms.TextBox();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -158,6 +158,15 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(880, 106);
             this.panel6.TabIndex = 26;
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxPrice.Location = new System.Drawing.Point(258, 78);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(98, 21);
+            this.textBoxPrice.TabIndex = 25;
             // 
             // labelPrice
             // 
@@ -432,7 +441,7 @@
             // 
             this.vehicleFilter.Location = new System.Drawing.Point(6, 57);
             this.vehicleFilter.Name = "vehicleFilter";
-            this.vehicleFilter.Size = new System.Drawing.Size(506, 47);
+            this.vehicleFilter.Size = new System.Drawing.Size(615, 47);
             this.vehicleFilter.TabIndex = 28;
             // 
             // comboBoxCpfDocumentSellerSale
@@ -761,6 +770,16 @@
             this.panel3.Size = new System.Drawing.Size(870, 289);
             this.panel3.TabIndex = 11;
             // 
+            // textBoxSalarySeller
+            // 
+            this.textBoxSalarySeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSalarySeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxSalarySeller.Location = new System.Drawing.Point(138, 253);
+            this.textBoxSalarySeller.MaxLength = 11;
+            this.textBoxSalarySeller.Name = "textBoxSalarySeller";
+            this.textBoxSalarySeller.Size = new System.Drawing.Size(117, 21);
+            this.textBoxSalarySeller.TabIndex = 12;
+            // 
             // labelSalary
             // 
             this.labelSalary.AutoSize = true;
@@ -880,25 +899,6 @@
             this.textBoxInputAddressSeller.Name = "textBoxInputAddressSeller";
             this.textBoxInputAddressSeller.Size = new System.Drawing.Size(413, 21);
             this.textBoxInputAddressSeller.TabIndex = 4;
-            // 
-            // textBoxPrice
-            // 
-            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxPrice.Location = new System.Drawing.Point(258, 78);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(98, 21);
-            this.textBoxPrice.TabIndex = 25;
-            // 
-            // textBoxSalarySeller
-            // 
-            this.textBoxSalarySeller.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSalarySeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxSalarySeller.Location = new System.Drawing.Point(138, 253);
-            this.textBoxSalarySeller.MaxLength = 11;
-            this.textBoxSalarySeller.Name = "textBoxSalarySeller";
-            this.textBoxSalarySeller.Size = new System.Drawing.Size(117, 21);
-            this.textBoxSalarySeller.TabIndex = 12;
             // 
             // FMain
             // 

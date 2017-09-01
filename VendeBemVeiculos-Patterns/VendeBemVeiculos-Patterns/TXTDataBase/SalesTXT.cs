@@ -37,7 +37,7 @@ namespace VendeBemVeiculos_Patterns.TXTDataBase
             var client = $"{sale.Client.CPFDocument}";
             var seller = $"{sale.Seller.CPFDocument}";
             var vehicle = $"{sale.Vehicle.Brand}{DELIMITER}{sale.Vehicle.Model}{DELIMITER}{sale.Vehicle.Year}{DELIMITER}" +
-                $"{sale.Vehicle.Color}";
+                $"{sale.Vehicle.Color}{DELIMITER}{sale.Vehicle.Price}";
             var date = sale.Date.ToString(DATE_STRING);
             return $"{date}{DELIMITER}{client}{DELIMITER}{seller}{DELIMITER}{vehicle}{BREAK_LINE}";
         }

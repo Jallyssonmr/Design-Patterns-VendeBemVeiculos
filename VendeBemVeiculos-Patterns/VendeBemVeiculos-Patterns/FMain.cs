@@ -61,7 +61,8 @@ namespace VendeBemVeiculos_Patterns
                 return;
             }
             var valuesVehicle = this.GetValuesFieldsNewVevhicle();
-            var vehicle = new Vehicle(valuesVehicle[BRAND], valuesVehicle[MODEL], int.Parse(valuesVehicle[YEAR]), valuesVehicle[COLOR]);
+            var vehicle = new Vehicle(valuesVehicle[BRAND], valuesVehicle[MODEL], int.Parse(valuesVehicle[YEAR]),
+                valuesVehicle[COLOR], Convert.ToDouble(valuesVehicle[PRICE]));
             this.stockControl.Add(vehicle, int.Parse(valuesVehicle[QUANTITY]));
             this.CleanNewVehicleDataFields();
 
@@ -75,7 +76,8 @@ namespace VendeBemVeiculos_Patterns
                 string.IsNullOrEmpty(this.textBoxQuantityNewVehicle.Text) ||
                 string.IsNullOrEmpty(this.comboBoxBrandNewVehicle.Text) ||
                 string.IsNullOrEmpty(this.comboBoxYearNewVehicle.Text) ||
-                string.IsNullOrEmpty(this.comboBoxColorNewVehicle.Text);
+                string.IsNullOrEmpty(this.comboBoxColorNewVehicle.Text) ||
+                string.IsNullOrEmpty(this.maskedTextBoxPrice.Text);
         }
 
         private IDictionary<string, string> GetValuesFieldsNewVevhicle()
@@ -86,6 +88,7 @@ namespace VendeBemVeiculos_Patterns
             valuesVehicles.Add(MODEL, this.textBoxModelNewVehicle.Text.ToUpper());
             valuesVehicles.Add(YEAR, this.comboBoxYearNewVehicle.Text);
             valuesVehicles.Add(COLOR, this.comboBoxColorNewVehicle.Text.ToUpper());
+            valuesVehicles.Add(PRICE, this.maskedTextBoxPrice.Text);
             valuesVehicles.Add(QUANTITY, this.textBoxQuantityNewVehicle.Text);
             return valuesVehicles;
         }
@@ -103,6 +106,7 @@ namespace VendeBemVeiculos_Patterns
             this.comboBoxBrandNewVehicle.Text = string.Empty;
             this.comboBoxYearNewVehicle.Text = string.Empty;
             this.comboBoxColorNewVehicle.Text = string.Empty;
+            this.maskedTextBoxPrice.Text = string.Empty;
         }
 
         private void ButtonStockReportClick(object sender, EventArgs e)

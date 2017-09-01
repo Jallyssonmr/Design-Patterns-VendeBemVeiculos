@@ -9,7 +9,7 @@ namespace VendeBemVeiculos_Patterns.Reporters
     public class StockReport : IReport
     {
         private const char DELIMITER = ';';
-        
+
         public StockReport(StockControl controler)
         {
             this.Controler = controler;
@@ -26,7 +26,8 @@ namespace VendeBemVeiculos_Patterns.Reporters
 
             if (fileDialogStock.ShowDialog() == DialogResult.OK)
             {
-                var labelColumns = $"MARCA{DELIMITER}MODELO{DELIMITER}ANO{DELIMITER}COR{DELIMITER}Quantidade";
+                var labelColumns = $"MARCA{DELIMITER}MODELO{DELIMITER}ANO{DELIMITER}COR{DELIMITER}PRECO" +
+                    $"{DELIMITER}Quantidade";
 
                 using (var report = new StreamWriter(fileDialogStock.FileName))
                 {

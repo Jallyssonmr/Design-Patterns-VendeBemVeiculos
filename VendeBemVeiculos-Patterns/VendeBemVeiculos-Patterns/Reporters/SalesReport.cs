@@ -29,7 +29,7 @@ namespace VendeBemVeiculos_Patterns.Reporters
                 var labelsDateTime = $"DATA{DELIMITER}";
                 var labelsColumnsCustomers = $"CLIENTE{DELIMITER}CPF{DELIMITER}";
                 var labelsColumnsSalesman = $"VENDEDOR{DELIMITER}CPF{DELIMITER}";
-                var labelsColumnsVehicles = $"MARCA{DELIMITER}MODELO{DELIMITER}ANO{DELIMITER}COR";
+                var labelsColumnsVehicles = $"MARCA{DELIMITER}MODELO{DELIMITER}ANO{DELIMITER}COR{DELIMITER}PRECO";
                 var labelsColumns = $"{labelsDateTime}{labelsColumnsCustomers}{labelsColumnsSalesman}{labelsColumnsVehicles}";
 
                 using (var report = new StreamWriter(fileDialogStock.FileName))

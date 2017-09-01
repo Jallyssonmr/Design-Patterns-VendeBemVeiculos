@@ -58,6 +58,7 @@ namespace VendeBemVeiculos_Patterns
                     Model = vehicle.Model,
                     Year = vehicle.Year,
                     Color = vehicle.Color,
+                    Price = vehicle.Price,
                     Quantity = this.stockControl.Count(vehicle)
                 };
                 GridOfVehicles.Add(gridStock);

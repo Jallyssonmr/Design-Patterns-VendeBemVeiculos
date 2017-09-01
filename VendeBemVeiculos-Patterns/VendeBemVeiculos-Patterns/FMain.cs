@@ -22,6 +22,7 @@ namespace VendeBemVeiculos_Patterns
         private const string MODEL = "model";
         private const string YEAR = "year";
         private const string COLOR = "color";
+        private const string PRICE = "price";
         private const string QUANTITY = "quantity";
 
         private const string NAME = "name";

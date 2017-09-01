@@ -4,21 +4,24 @@
     {
         private const char DELIMITER = ';';
 
-        public Vehicle(string brand, string model, int year, string color)
+        public Vehicle(string brand, string model, int year, string color, double price)
         {
             this.Brand = brand;
             this.Model = model;
             this.Year = year;
             this.Color = color;
+            this.Price = price;
         }
 
-        public string Brand { get; set; }
+        public string Brand { get; private set; }
 
-        public string Model { get; set; }
+        public string Model { get; private set; }
 
-        public int Year { get; set; }
+        public int Year { get; private set; }
 
-        public string Color { get; set; }
+        public string Color { get; private set; }
+
+        public double Price { get; private set; }
 
         public override string ToString()
         {

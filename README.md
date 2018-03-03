@@ -1,2 +1,2 @@
 # Trainne (Cappta)
-:car::moneybag:
+:car: Control of sale of vehicles
